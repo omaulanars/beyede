@@ -46,6 +46,7 @@
             overflow-x: hidden;
         }
 
+        /* Texture (Z-Index diatur agar di bawah Navbar) */
         body::before {
             content: "";
             position: fixed;
@@ -53,7 +54,8 @@
             background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.03'/%3E%3C/svg%3E");
             opacity: 0.5;
             pointer-events: none;
-            z-index: 999;
+            z-index: 50;
+            /* Texture di bawah navbar (9999) tapi di atas konten */
         }
 
         h1,
@@ -113,20 +115,31 @@
             background: rgba(255, 255, 255, 0.05);
         }
 
-        /* Navbar */
+        /* --- NAVBAR FIX (Z-INDEX TINGGI) --- */
         .navbar-wrapper {
             position: sticky;
             top: 0;
-            z-index: 100;
+            z-index: 9999;
+            /* Pastikan ini paling tinggi */
             padding-top: 20px;
         }
 
         .navbar {
-            background: rgba(30, 30, 30, 0.8);
+            background: rgba(30, 30, 30, 0.9);
             backdrop-filter: blur(16px);
             -webkit-backdrop-filter: blur(16px);
             border-bottom: 1px solid var(--border-subtle);
             padding: 16px 0;
+            position: relative;
+            transition: background-color 0.3s ease;
+        }
+
+        /* Saat menu dibuka, background jadi hitam solid (tidak transparan) */
+        .navbar.menu-active {
+            background: #121212 !important;
+            /* Force Solid Color */
+            backdrop-filter: none;
+            border-bottom: 1px solid #222;
         }
 
         .nav-content {
@@ -142,9 +155,11 @@
             letter-spacing: -0.05em;
         }
 
+        /* Desktop Menu */
         .nav-links {
             display: flex;
             gap: 30px;
+            align-items: center;
         }
 
         .nav-links a {
@@ -169,11 +184,68 @@
             background: var(--accent-cyan);
         }
 
+        /* Mobile Menu */
+        .mobile-toggle {
+            display: none;
+            cursor: pointer;
+            color: var(--text-main);
+        }
+
+        .mobile-menu {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            width: 100%;
+            background: #121212;
+            /* SOLID BACKGROUND (Penting agar hero tidak tembus) */
+            border-bottom: 1px solid var(--border-subtle);
+            padding: 20px;
+            flex-direction: column;
+            gap: 20px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.8);
+            transform-origin: top;
+            animation: slideDown 0.3s ease-out;
+            z-index: 10000;
+            /* Di atas segalanya */
+        }
+
+        .mobile-menu.open {
+            display: flex;
+        }
+
+        .mobile-menu a {
+            font-size: 1.1rem;
+            color: var(--text-muted);
+            padding: 10px 0;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .mobile-menu a:hover,
+        .mobile-menu a.active {
+            color: var(--accent-cyan);
+            padding-left: 10px;
+        }
+
+        @keyframes slideDown {
+            from {
+                opacity: 0;
+                transform: translateY(-10px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
         /* --- HERO SECTION --- */
         .hero {
             padding: 80px 0 100px;
             position: relative;
             overflow: hidden;
+            z-index: 1;
+            /* Pastikan lebih rendah dari Navbar */
         }
 
         .glow {
@@ -237,6 +309,7 @@
 
         .hero-image-wrapper img {
             width: 100%;
+            height: auto;
             filter: drop-shadow(0 30px 50px rgba(0, 0, 0, 0.5));
             transition: transform 0.7s cubic-bezier(0.2, 0.8, 0.2, 1);
         }
@@ -302,7 +375,7 @@
 
         .product-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
             gap: 30px;
         }
 
@@ -411,7 +484,7 @@
             opacity: 0.5;
         }
 
-        /* Updated Form Style (Side-by-side) */
+        /* Updated Form (Side-by-side Desktop) */
         .form-row {
             display: flex;
             gap: 15px;
@@ -558,10 +631,11 @@
             font-size: 0.85rem;
         }
 
-        /* Responsive */
+        /* --- MOBILE RESPONSIVE TWEAKS --- */
         @media (max-width: 1024px) {
             .footer-grid {
                 grid-template-columns: repeat(2, 1fr);
+                gap: 30px;
             }
 
             .hero-grid {
@@ -571,10 +645,6 @@
 
             .hero-text h1 {
                 font-size: 2.5rem;
-            }
-
-            .nav-links {
-                display: none;
             }
 
             .hero-image-wrapper {
@@ -589,12 +659,34 @@
                 justify-content: center;
             }
 
+            /* Navbar Logic Tablet/Mobile */
+            .nav-links {
+                display: none;
+            }
+
+            /* Hide Desktop Menu */
+            .mobile-toggle {
+                display: block;
+            }
+
+            /* Show Hamburger */
+            .btn-nav-desktop {
+                display: none;
+            }
+
+            /* Hide CTA on desktop nav */
+
             .promo-box {
                 height: 300px;
             }
         }
 
-        @media (max-width: 768px) {
+        @media (max-width: 640px) {
+            .footer-grid {
+                grid-template-columns: 1fr;
+            }
+
+            /* Form stack in mobile */
             .form-row {
                 flex-direction: column;
             }
@@ -604,8 +696,27 @@
                 width: 100%;
             }
 
-            .footer-grid {
+            .hero {
+                padding: 40px 0 60px;
+            }
+
+            .hero-text h1 {
+                font-size: 2.2rem;
+            }
+
+            .section-title h2 {
+                font-size: 2rem;
+            }
+
+            /* Proporsi Mobile */
+            .product-grid {
                 grid-template-columns: 1fr;
+                max-width: 400px;
+                margin: 0 auto;
+            }
+
+            .cta-box {
+                padding: 40px 20px;
             }
         }
     </style>
@@ -625,9 +736,25 @@
                 <a href="blog.html">Blog</a>
             </div>
 
-            <a href="#contact" class="btn btn-primary" style="padding: 10px 24px; font-size: 0.9rem;">
-                Hubungi Sales
-            </a>
+            <div style="display: flex; align-items: center; gap: 20px;">
+                <a href="#contact" class="btn btn-primary btn-nav-desktop"
+                    style="padding: 10px 24px; font-size: 0.9rem;">
+                    Hubungi Sales
+                </a>
+
+                <div class="mobile-toggle" onclick="toggleMenu()">
+                    <i data-lucide="menu" style="width: 28px; height: 28px;"></i>
+                </div>
+            </div>
+        </div>
+
+        <div class="mobile-menu" id="mobileMenu">
+            <a href="#" class="active">Beranda</a>
+            <a href="about.html">Tentang Kami</a>
+            <a href="model.html">Model</a>
+            <a href="pricelist.html">Daftar Harga</a>
+            <a href="blog.html">Blog</a>
+            <a href="#contact" style="color: var(--accent-cyan); font-weight: 700;">Hubungi Sales</a>
         </div>
     </nav>
 
@@ -786,7 +913,7 @@
                 <div class="footer-col">
                     <h4>Pintasan</h4>
                     <ul>
-                        <li><a href="index.html">Beranda</a></li>
+                        <li><a href="#">Beranda</a></li>
                         <li><a href="about.html">Tentang Kami</a></li>
                         <li><a href="pricelist.html">Daftar Harga</a></li>
                         <li><a href="#testdrive">Test Drive</a></li>
@@ -851,17 +978,26 @@
                 stroke="none">
                 <path
                     d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
+                           
             </svg>
-        </a>
+                    </a>
+           
     </div>
 
+       
     <script>
-        // Init Icons
         lucide.createIcons();
 
-        // Scroll to Top Logic
-        const scrollBtn = document.getElementById('scrollTopBtn');
+        // Mobile Menu Toggle
+        function toggleMenu() {
+            const menu = document.getElementById('mobileMenu');
+            const nav = document.querySelector('.navbar'); // Select navbar
+            menu.classList.toggle('open');
+            nav.classList.toggle('menu-active'); // Toggle grey background
+        }
 
+        // Scroll to Top
+        const scrollBtn = document.getElementById('scrollTopBtn');
         window.onscroll = function () {
             if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
                 scrollBtn.classList.add('show');
