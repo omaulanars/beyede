@@ -235,7 +235,11 @@
 
         /* --- ABOUT PAGE STYLES --- */
         .page-header {
-            padding: 100px 0 60px;
+            /* UBAH PADDING DISINI */
+            /* Sebelumnya: 100px 0 60px */
+            /* Sekarang: 40px (atas) 0 (kanan-kiri) 40px (bawah) */
+            padding: 40px 0 40px;
+
             text-align: center;
             background: radial-gradient(circle at center, rgba(0, 180, 216, 0.1) 0%, transparent 70%);
             position: relative;
@@ -244,7 +248,10 @@
 
         .page-header h1 {
             font-size: 3rem;
-            margin-bottom: 20px;
+            /* Kurangi jarak bawah judul agar lebih rapat dengan deskripsi */
+            margin-bottom: 10px;
+            /* Tambahkan margin atas sedikit (opsional) untuk jarak dari tulisan kecil 'BUILD YOUR DREAMS' */
+            margin-top: 10px;
         }
 
         .page-header p {
@@ -515,11 +522,21 @@
             .story-grid {
                 grid-template-columns: 1fr;
                 gap: 40px;
+                /* PENTING: Paksa arah text normal (Left to Right) di mobile 
+                   untuk menimpa inline style "direction: rtl" di HTML */
+                direction: ltr !important;
             }
 
-            /* Stack story grid */
+            /* --- TAMBAHAN BARU: AGAR GAMBAR DI ATAS --- */
+            .image-block {
+                order: -1;
+                /* Memindahkan elemen ke urutan pertama */
+                margin-bottom: 20px;
+                /* Jarak antara gambar dan teks di bawahnya */
+            }
 
-            /* Navbar Mobile Logic */
+            /* ------------------------------------------ */
+
             .nav-links {
                 display: none;
             }
@@ -639,8 +656,7 @@
                     </p>
                 </div>
                 <div class="image-block">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/2/29/BYD_Seal_interior_IAA_2023_1X7A0168.jpg"
-                        alt="BYD Innovation" class="story-img">
+                    <img src="img/about.webp" alt="BYD Innovation" class="story-img">
                 </div>
             </div>
         </div>
@@ -672,8 +688,7 @@
                     </ul>
                 </div>
                 <div class="image-block">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/e/ee/BYD_Seal_001.jpg"
-                        alt="Blade Battery Tech" class="story-img">
+                    <img src="img/baterai.webp" alt="Blade Battery Tech" class="story-img">
                 </div>
             </div>
         </div>

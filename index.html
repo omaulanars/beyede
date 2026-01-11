@@ -55,7 +55,6 @@
             opacity: 0.5;
             pointer-events: none;
             z-index: 50;
-            /* Texture di bawah navbar (9999) tapi di atas konten */
         }
 
         h1,
@@ -120,7 +119,6 @@
             position: sticky;
             top: 0;
             z-index: 9999;
-            /* Pastikan ini paling tinggi */
             padding-top: 20px;
         }
 
@@ -134,10 +132,8 @@
             transition: background-color 0.3s ease;
         }
 
-        /* Saat menu dibuka, background jadi hitam solid (tidak transparan) */
         .navbar.menu-active {
             background: #121212 !important;
-            /* Force Solid Color */
             backdrop-filter: none;
             border-bottom: 1px solid #222;
         }
@@ -198,7 +194,6 @@
             left: 0;
             width: 100%;
             background: #121212;
-            /* SOLID BACKGROUND (Penting agar hero tidak tembus) */
             border-bottom: 1px solid var(--border-subtle);
             padding: 20px;
             flex-direction: column;
@@ -207,7 +202,6 @@
             transform-origin: top;
             animation: slideDown 0.3s ease-out;
             z-index: 10000;
-            /* Di atas segalanya */
         }
 
         .mobile-menu.open {
@@ -245,7 +239,6 @@
             position: relative;
             overflow: hidden;
             z-index: 1;
-            /* Pastikan lebih rendah dari Navbar */
         }
 
         .glow {
@@ -430,7 +423,7 @@
             color: var(--text-muted);
         }
 
-        /* --- PROMO BANNER --- */
+        /* --- PROMO BANNER (FIXED: GAMBAR TIDAK KEPOTONG) --- */
         .promo-section {
             padding: 40px 0 80px;
         }
@@ -438,18 +431,22 @@
         .promo-box {
             position: relative;
             width: 100%;
-            height: 500px;
+            height: auto;
+            /* Agar mengikuti tinggi gambar */
             border-radius: 30px;
             overflow: hidden;
             border: 1px solid var(--border-subtle);
             box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
             background: #000;
+            display: flex;
+            /* Mencegah spasi kosong di bawah gambar */
         }
 
         .promo-bg {
             width: 100%;
-            height: 100%;
-            object-fit: cover;
+            height: auto;
+            /* Ikut proporsi asli */
+            display: block;
             opacity: 0.9;
             transition: transform 10s ease;
         }
@@ -484,7 +481,6 @@
             opacity: 0.5;
         }
 
-        /* Updated Form (Side-by-side Desktop) */
         .form-row {
             display: flex;
             gap: 15px;
@@ -529,6 +525,32 @@
             display: flex;
             align-items: center;
             justify-content: center;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+            cursor: pointer;
+            transition: 0.3s;
+            color: white;
+        }
+
+        .float-btn svg {
+            width: 32px;
+            height: 32px;
+            display: block;
+            /* Penting: menghilangkan gap baris teks */
+        }
+
+        .float-btn {
+            /* Pastikan flex centering tetap ada */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            /* Reset padding jika ada */
+            padding: 0;
+
+            /* ... properti lain tetap sama ... */
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
             box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
             cursor: pointer;
             transition: 0.3s;
@@ -643,12 +665,16 @@
                 text-align: center;
             }
 
-            .hero-text h1 {
-                font-size: 2.5rem;
+            /* FIX HERO MOBILE: GAMBAR DI ATAS */
+            .hero-image-wrapper {
+                order: -1;
+                /* Pindahkan ke atas */
+                margin-top: 0;
+                margin-bottom: 40px;
             }
 
-            .hero-image-wrapper {
-                margin-top: 40px;
+            .hero-text h1 {
+                font-size: 2.5rem;
             }
 
             .spec-float {
@@ -659,25 +685,21 @@
                 justify-content: center;
             }
 
-            /* Navbar Logic Tablet/Mobile */
             .nav-links {
                 display: none;
             }
 
-            /* Hide Desktop Menu */
             .mobile-toggle {
                 display: block;
             }
 
-            /* Show Hamburger */
             .btn-nav-desktop {
                 display: none;
             }
 
-            /* Hide CTA on desktop nav */
-
+            /* Fix Promo di mobile agar tidak dipaksa tinggi */
             .promo-box {
-                height: 300px;
+                height: auto;
             }
         }
 
@@ -686,7 +708,6 @@
                 grid-template-columns: 1fr;
             }
 
-            /* Form stack in mobile */
             .form-row {
                 flex-direction: column;
             }
@@ -708,7 +729,6 @@
                 font-size: 2rem;
             }
 
-            /* Proporsi Mobile */
             .product-grid {
                 grid-template-columns: 1fr;
                 max-width: 400px;
@@ -772,17 +792,17 @@
                     </p>
 
                     <div class="hero-buttons">
-                        <a href="#testdrive" class="btn btn-primary">
-                            Test Drive <i data-lucide="arrow-right" style="width:18px"></i>
+                        <a href="model.html" class="btn btn-primary">
+                            Lihat Model <i data-lucide="arrow-right" style="width:18px"></i>
                         </a>
-                        <a href="#brochure" class="btn btn-outline">
-                            Unduh Brosur
+                        <a href="pricelist.html" class="btn btn-outline">
+                            Daftar Harga
                         </a>
                     </div>
                 </div>
 
                 <div class="hero-image-wrapper">
-                    <img src="img/mobil.png" alt="BYD Seal White">
+                    <img src="img/mobil.webp" alt="BYD Seal White">
 
                     <div class="spec-float sf-1">
                         <i data-lucide="battery-charging"></i>
@@ -812,7 +832,7 @@
         <div class="product-grid">
 
             <div class="product-card">
-                <img src="img/seal.png" alt="BYD Seal" class="product-img">
+                <img src="img/seal.webp" alt="BYD Seal" class="product-img">
                 <h3 class="p-name">BYD Seal</h3>
                 <p class="p-desc">Performance Sedan dengan estetika Ocean X.</p>
 
@@ -830,7 +850,7 @@
             </div>
 
             <div class="product-card">
-                <img src="img/atto3.png" alt="BYD Atto 3" class="product-img">
+                <img src="img/atto3.webp" alt="BYD Atto 3" class="product-img">
                 <h3 class="p-name">BYD Atto 3</h3>
                 <p class="p-desc">SUV Dinamis yang luas dan bertenaga.</p>
 
@@ -848,7 +868,7 @@
             </div>
 
             <div class="product-card">
-                <img src="img/dolphin.jpg" alt="BYD Dolphin" class="product-img">
+                <img src="img/dolphin.webp" alt="BYD Dolphin" class="product-img">
                 <h3 class="p-name">BYD Dolphin</h3>
                 <p class="p-desc">Compact Hatchback lincah nan efisien.</p>
 
@@ -877,8 +897,7 @@
 
     <section class="container promo-section">
         <div class="promo-box">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/2/29/BYD_Seal_interior_IAA_2023_1X7A0168.jpg"
-                alt="BYD Interior Experience" class="promo-bg">
+            <img src="img/promo.gif" alt="BYD Interior Experience" class="promo-bg">
         </div>
     </section>
 
@@ -974,14 +993,12 @@
 
         <a href="https://wa.me/62895639068080" target="_blank" class="float-btn btn-wa"
             title="Hubungi Kami via WhatsApp">
-            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="white"
-                stroke="none">
+            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-whatsapp"
+                viewBox="0 0 16 16">
                 <path
-                    d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
-                           
+                    d="M13.601 2.326A7.854 7.854 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.933 7.933 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.898 7.898 0 0 0 13.6 2.326zM7.994 14.521a6.573 6.573 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.557 6.557 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592zm3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.729.729 0 0 0-.529.247c-.182.198-.691.677-.691 1.654 0 .977.71 1.916.81 2.049.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232z" />
             </svg>
-                    </a>
-           
+        </a>
     </div>
 
        
