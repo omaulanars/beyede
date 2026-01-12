@@ -4,7 +4,33 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BYD Electric - Future Technology</title>
+    <meta name="description"
+        content="BYD Electric Indonesia. Jelajahi masa depan teknologi kendaraan listrik dengan BYD Seal, Atto 3, Dolphin, dan M6. Inovasi Blade Battery untuk performa dan keamanan terbaik.">
+    <meta name="keywords"
+        content="BYD, Mobil Listrik, Electric Vehicle, BYD Seal, BYD Atto 3, BYD Dolphin, BYD M6, Blade Battery, EV Indonesia">
+    <meta name="author" content="BYD Sales Indonesia">
+    <meta name="robots" content="index, follow">
+
+    <link rel="canonical" href="https://www.byd-indonesia.com/">
+
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.byd-indonesia.com/">
+    <meta property="og:title" content="BYD Electric - Future Technology">
+    <meta property="og:description"
+        content="Jelajahi masa depan teknologi kendaraan listrik dengan BYD. Performa senyap, Blade Battery revolusioner, dan kemewahan berkendara modern.">
+    <meta property="og:image" content="img/about.webp">
+
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://www.byd-indonesia.com/">
+    <meta property="twitter:title" content="BYD Electric - Future Technology">
+    <meta property="twitter:description"
+        content="Jelajahi masa depan teknologi kendaraan listrik dengan BYD. Performa senyap, Blade Battery revolusioner, dan kemewahan berkendara modern.">
+    <meta property="twitter:image" content="img/about.webp">
+
+    <link rel="icon" type="image/png" href="img/favicon.png">
+    <link rel="apple-touch-icon" href="img/apple-touch-icon.png">
+
+    <title>BYD Electric - Future Technology | Mobil Listrik Masa Depan</title>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -394,6 +420,7 @@
             filter: drop-shadow(0 10px 20px rgba(0, 0, 0, 0.2));
         }
 
+        /* H3 diganti H3 agar struktur rapi (H1->H2->H3) */
         .p-name {
             font-size: 1.5rem;
             margin-bottom: 5px;
@@ -423,7 +450,7 @@
             color: var(--text-muted);
         }
 
-        /* --- PROMO BANNER (FIXED: GAMBAR TIDAK KEPOTONG) --- */
+        /* --- PROMO BANNER --- */
         .promo-section {
             padding: 40px 0 80px;
         }
@@ -432,20 +459,17 @@
             position: relative;
             width: 100%;
             height: auto;
-            /* Agar mengikuti tinggi gambar */
             border-radius: 30px;
             overflow: hidden;
             border: 1px solid var(--border-subtle);
             box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
             background: #000;
             display: flex;
-            /* Mencegah spasi kosong di bawah gambar */
         }
 
         .promo-bg {
             width: 100%;
             height: auto;
-            /* Ikut proporsi asli */
             display: block;
             opacity: 0.9;
             transition: transform 10s ease;
@@ -529,32 +553,13 @@
             cursor: pointer;
             transition: 0.3s;
             color: white;
+            padding: 0;
         }
 
         .float-btn svg {
             width: 32px;
             height: 32px;
             display: block;
-            /* Penting: menghilangkan gap baris teks */
-        }
-
-        .float-btn {
-            /* Pastikan flex centering tetap ada */
-            display: flex;
-            align-items: center;
-            justify-content: center;
-
-            /* Reset padding jika ada */
-            padding: 0;
-
-            /* ... properti lain tetap sama ... */
-            width: 60px;
-            height: 60px;
-            border-radius: 50%;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
-            cursor: pointer;
-            transition: 0.3s;
-            color: white;
         }
 
         .btn-wa {
@@ -665,10 +670,8 @@
                 text-align: center;
             }
 
-            /* FIX HERO MOBILE: GAMBAR DI ATAS */
             .hero-image-wrapper {
                 order: -1;
-                /* Pindahkan ke atas */
                 margin-top: 0;
                 margin-bottom: 40px;
             }
@@ -685,7 +688,8 @@
                 justify-content: center;
             }
 
-            .nav-links {
+            .nav-links,
+            .btn-nav-desktop {
                 display: none;
             }
 
@@ -693,11 +697,6 @@
                 display: block;
             }
 
-            .btn-nav-desktop {
-                display: none;
-            }
-
-            /* Fix Promo di mobile agar tidak dipaksa tinggi */
             .promo-box {
                 height: auto;
             }
@@ -746,7 +745,7 @@
 
     <nav class="navbar">
         <div class="container nav-content">
-            <a href="#" class="brand">BYD<span style="color:var(--accent-cyan)">.</span></a>
+            <a href="#" class="brand" aria-label="BYD Home">BYD<span style="color:var(--accent-cyan)">.</span></a>
 
             <div class="nav-links">
                 <a href="#" class="active">Beranda</a>
@@ -762,7 +761,7 @@
                     Hubungi Sales
                 </a>
 
-                <div class="mobile-toggle" onclick="toggleMenu()">
+                <div class="mobile-toggle" onclick="toggleMenu()" aria-label="Menu Toggle">
                     <i data-lucide="menu" style="width: 28px; height: 28px;"></i>
                 </div>
             </div>
@@ -778,7 +777,7 @@
         </div>
     </nav>
 
-    <section class="hero">
+    <header class="hero">
         <div class="glow glow-1"></div>
         <div class="glow glow-2"></div>
 
@@ -792,17 +791,18 @@
                     </p>
 
                     <div class="hero-buttons">
-                        <a href="model.html" class="btn btn-primary">
+                        <a href="model.html" class="btn btn-primary" aria-label="Lihat Model Mobil">
                             Lihat Model <i data-lucide="arrow-right" style="width:18px"></i>
                         </a>
-                        <a href="pricelist.html" class="btn btn-outline">
+                        <a href="pricelist.html" class="btn btn-outline" aria-label="Lihat Daftar Harga">
                             Daftar Harga
                         </a>
                     </div>
                 </div>
 
                 <div class="hero-image-wrapper">
-                    <img src="img/mobil.webp" alt="BYD Seal White">
+                    <img src="img/mobil.webp" alt="BYD Seal White Performance Electric Sedan" width="600" height="400"
+                        loading="eager">
 
                     <div class="spec-float sf-1">
                         <i data-lucide="battery-charging"></i>
@@ -821,7 +821,7 @@
                 </div>
             </div>
         </div>
-    </section>
+    </header>
 
     <section class="container" id="models" style="padding-top: 60px;">
         <div class="section-title">
@@ -831,8 +831,9 @@
 
         <div class="product-grid">
 
-            <div class="product-card">
-                <img src="img/seal.webp" alt="BYD Seal" class="product-img">
+            <article class="product-card">
+                <img src="img/seal.webp" alt="BYD Seal Performance Sedan" class="product-img" width="300" height="200"
+                    loading="lazy">
                 <h3 class="p-name">BYD Seal</h3>
                 <p class="p-desc">Performance Sedan dengan estetika Ocean X.</p>
 
@@ -846,11 +847,12 @@
                         <span>0-100</span>
                     </div>
                 </div>
-                <a href="#" class="btn btn-outline" style="width:100%; border-radius: 12px;">Lihat Detail</a>
-            </div>
+                <a href="seal.html" class="btn btn-outline" style="width:100%; border-radius: 12px;">Lihat Detail</a>
+            </article>
 
-            <div class="product-card">
-                <img src="img/atto3.webp" alt="BYD Atto 3" class="product-img">
+            <article class="product-card">
+                <img src="img/atto3.webp" alt="BYD Atto 3 Electric SUV" class="product-img" width="300" height="200"
+                    loading="lazy">
                 <h3 class="p-name">BYD Atto 3</h3>
                 <p class="p-desc">SUV Dinamis yang luas dan bertenaga.</p>
 
@@ -864,11 +866,12 @@
                         <span>0-100</span>
                     </div>
                 </div>
-                <a href="#" class="btn btn-outline" style="width:100%; border-radius: 12px;">Lihat Detail</a>
-            </div>
+                <a href="atto3.html" class="btn btn-outline" style="width:100%; border-radius: 12px;">Lihat Detail</a>
+            </article>
 
-            <div class="product-card">
-                <img src="img/dolphin.webp" alt="BYD Dolphin" class="product-img">
+            <article class="product-card">
+                <img src="img/dolphin.webp" alt="BYD Dolphin Electric Hatchback" class="product-img" width="300"
+                    height="200" loading="lazy">
                 <h3 class="p-name">BYD Dolphin</h3>
                 <p class="p-desc">Compact Hatchback lincah nan efisien.</p>
 
@@ -882,8 +885,8 @@
                         <span>Battery</span>
                     </div>
                 </div>
-                <a href="#" class="btn btn-outline" style="width:100%; border-radius: 12px;">Lihat Detail</a>
-            </div>
+                <a href="dolphin.html" class="btn btn-outline" style="width:100%; border-radius: 12px;">Lihat Detail</a>
+            </article>
 
         </div>
 
@@ -896,9 +899,11 @@
     </section>
 
     <section class="container promo-section">
-        <div class="promo-box">
-            <img src="img/promo.gif" alt="BYD Interior Experience" class="promo-bg">
-        </div>
+        <a href="https://wa.me/62895639068080" target="_blank" class="promo-box"
+            style="display: block; cursor: pointer;" aria-label="Promo WhatsApp">
+            <img src="img/promo.gif" alt="BYD Interior Experience Promo" class="promo-bg" width="1200" height="600"
+                loading="lazy">
+        </a>
     </section>
 
     <section class="cta-section container" id="contact">
@@ -908,21 +913,37 @@
             <p style="color:var(--text-muted); margin-bottom: 20px;">Konsultasikan kebutuhan mobil listrik Anda dengan
                 Sales Executive kami.</p>
 
-            <form class="form-row">
-                <input type="text" placeholder="Nama Anda" class="input-dark">
-                <input type="text" placeholder="Nomor WhatsApp" class="input-dark">
+            <form class="form-row" id="waForm" onsubmit="sendToWhatsapp(event)">
+                <input type="text" id="waName" placeholder="Nama Anda" class="input-dark" required
+                    aria-label="Nama Anda">
+                <input type="text" id="waNumber" placeholder="Nomor WhatsApp Anda" class="input-dark" required
+                    aria-label="Nomor WhatsApp">
                 <button type="submit" class="btn btn-primary">Kirim Pesan</button>
             </form>
         </div>
     </section>
+
+    <script>
+        function sendToWhatsapp(e) {
+            e.preventDefault();
+
+            const name = document.getElementById('waName').value;
+            const userNumber = document.getElementById('waNumber').value;
+            const targetNumber = '62895639068080';
+            const message = `Halo Sales BYD, perkenalkan saya *${name}* (${userNumber}). Saya ingin konsultasi mengenai mobil listrik BYD. Mohon informasinya. Terima kasih.`;
+            const waUrl = `https://wa.me/${targetNumber}?text=${encodeURIComponent(message)}`;
+
+            window.open(waUrl, '_blank');
+        }
+    </script>
 
     <footer class="site-footer">
         <div class="container">
             <div class="footer-grid">
 
                 <div class="footer-col">
-                    <a href="#" class="brand" style="display:block; margin-bottom:15px;">BYD<span
-                            style="color:var(--accent-cyan)">.</span></a>
+                    <a href="#" class="brand" style="display:block; margin-bottom:15px;"
+                        aria-label="BYD Footer Logo">BYD<span style="color:var(--accent-cyan)">.</span></a>
                     <p class="footer-desc">
                         Build Your Dreams. Pelopor global dalam inovasi teknologi energi bersih dan transportasi masa
                         depan.
@@ -987,12 +1008,12 @@
     </footer>
 
     <div class="floating-container">
-        <div class="float-btn btn-scroll" id="scrollTopBtn" onclick="scrollToTop()">
+        <div class="float-btn btn-scroll" id="scrollTopBtn" onclick="scrollToTop()" aria-label="Scroll to Top">
             <i data-lucide="arrow-up"></i>
         </div>
 
         <a href="https://wa.me/62895639068080" target="_blank" class="float-btn btn-wa"
-            title="Hubungi Kami via WhatsApp">
+            title="Hubungi Kami via WhatsApp" aria-label="Chat WhatsApp">
             <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-whatsapp"
                 viewBox="0 0 16 16">
                 <path
@@ -1001,7 +1022,6 @@
         </a>
     </div>
 
-       
     <script>
         lucide.createIcons();
 
