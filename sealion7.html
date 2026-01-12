@@ -4,7 +4,37 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BYD Sealion 7 - Detail</title>
+
+    <meta name="description"
+        content="BYD Sealion 7, SUV Coupe Listrik Performa Tinggi. Nikmati kemewahan dan kecepatan dengan teknologi e-Platform 3.0 dan Blade Battery.">
+    <meta name="keywords"
+        content="BYD Sealion 7, SUV Listrik Sport, Harga BYD Sealion 7, Spesifikasi Sealion 7, Mobil Listrik Cepat, Review BYD Sealion 7">
+    <meta name="author" content="BYD Sales Indonesia">
+    <meta name="robots" content="index, follow">
+
+    <link rel="canonical" href="https://beyede.vercel.app/sealion7.html">
+
+    <meta property="og:type" content="product">
+    <meta property="og:url" content="https://beyede.vercel.app/sealion7.html">
+    <meta property="og:title" content="BYD Sealion 7 - Performance SUV Coupe">
+    <meta property="og:description"
+        content="SUV Coupe bertenaga listrik dengan akselerasi 4.5 detik. Gaya sporty, fitur premium, dan jarak tempuh memukau.">
+    <meta property="og:image" content="https://beyede.vercel.app/img/sealion7.webp">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:type" content="image/webp">
+
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://beyede.vercel.app/sealion7.html">
+    <meta property="twitter:title" content="BYD Sealion 7 - Performance SUV Coupe">
+    <meta property="twitter:description"
+        content="SUV Coupe bertenaga listrik dengan akselerasi 4.5 detik. Gaya sporty, fitur premium, dan jarak tempuh memukau.">
+    <meta property="twitter:image" content="https://beyede.vercel.app/img/sealion7.webp">
+
+    <link rel="icon" type="image/png" href="img/favicon.png">
+    <link rel="apple-touch-icon" href="img/apple-touch-icon.png">
+
+    <title>BYD Sealion 7 - Detail Spesifikasi & Harga | BYD Electric</title>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -33,12 +63,23 @@
             box-sizing: border-box;
         }
 
+        html {
+            scroll-behavior: smooth;
+        }
+
         body {
             background-color: var(--bg-dark);
             color: var(--text-main);
             font-family: var(--font-main);
             line-height: 1.6;
             overflow-x: hidden;
+        }
+
+        /* RESET GAMBAR AGAR TIDAK GEPENG */
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
         }
 
         /* Navbar Styles */
@@ -63,7 +104,6 @@
             backdrop-filter: none;
         }
 
-        /* CONTAINER DEFAULT (Desktop/Tablet) */
         .container {
             max-width: 1200px;
             margin: 0 auto;
@@ -124,8 +164,6 @@
         }
 
         /* --- DETAIL PAGE STYLES --- */
-
-        /* 1. Hero Compact */
         .detail-hero {
             padding: 40px 0 20px;
             text-align: center;
@@ -152,7 +190,6 @@
             filter: drop-shadow(0 20px 40px rgba(0, 0, 0, 0.5));
         }
 
-        /* 2. Content & Interior */
         .info-section {
             padding: 60px 0;
         }
@@ -169,7 +206,6 @@
             margin-bottom: 15px;
         }
 
-        /* Default Desktop: Justify */
         .info-text p {
             color: var(--text-muted);
             text-align: justify;
@@ -182,7 +218,6 @@
             border: 1px solid var(--border-subtle);
         }
 
-        /* 3. Specs Table Premium */
         .specs-section {
             padding-bottom: 80px;
         }
@@ -393,7 +428,7 @@
             display: inline-flex;
         }
 
-        /* --- MOBILE RESPONSIVE TWEAKS (OPTIMIZED) --- */
+        /* --- MOBILE RESPONSIVE TWEAKS --- */
         @media (max-width: 1024px) {
 
             .nav-links,
@@ -405,7 +440,6 @@
                 display: block;
             }
 
-            /* Typography & Spacing */
             .detail-hero h1 {
                 font-size: 2.2rem;
             }
@@ -415,13 +449,11 @@
                 margin-bottom: 20px;
             }
 
-            /* Hero Image */
             .hero-img {
                 margin-top: 10px;
                 width: 100%;
             }
 
-            /* Info Section */
             .info-section {
                 padding: 40px 0;
             }
@@ -440,22 +472,18 @@
                 font-size: 1.8rem;
             }
 
-            /* Text Align Left di Mobile */
             .info-text p {
                 text-align: left;
             }
 
-            /* Tabel Spesifikasi Mobile */
             .specs-section {
                 padding-bottom: 60px;
             }
 
-            /* Kurangi padding wrapper luar di mobile */
             .specs-table-wrapper {
                 padding: 5px;
             }
 
-            /* Kurangi padding sel di mobile */
             .specs-table td {
                 padding: 12px 10px;
             }
@@ -480,7 +508,6 @@
             }
         }
 
-        /* BREAKPOINT TAMBAHAN UNTUK HP KECIL */
         @media (max-width: 480px) {
             .footer-grid {
                 grid-template-columns: 1fr;
@@ -526,7 +553,7 @@
     <section class="detail-hero container">
         <h1>BYD Sealion 7</h1>
         <p>Performance SUV Coupe. Gaya Sporty dengan Teknologi Terdepan.</p>
-        <img src="img/sealion7.webp" alt="BYD Sealion 7" class="hero-img">
+        <img src="img/sealion7.webp" alt="BYD Sealion 7" width="800" height="450" class="hero-img" loading="eager">
     </section>
 
     <section class="info-section container">
@@ -546,7 +573,8 @@
                 </p>
             </div>
             <div class="info-img-wrapper">
-                <img src="img/bydsealion7.webp" alt="BYD Sealion 7" class="info-img">
+                <img src="img/bydsealion7.webp" alt="BYD Sealion 7" width="600" height="400" class="info-img"
+                    loading="lazy">
             </div>
         </div>
     </section>

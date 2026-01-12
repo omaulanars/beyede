@@ -4,7 +4,37 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Daftar Harga - BYD Electric</title>
+
+    <meta name="description"
+        content="Daftar harga terbaru mobil listrik BYD OTR Jakarta & Jawa Timur. Cek harga BYD Seal, Atto 3, Dolphin, dan M6. Simulasi kredit dan promo spesial tersedia.">
+    <meta name="keywords"
+        content="Harga BYD Seal, Harga BYD Atto 3, Harga BYD Dolphin, Harga BYD M6, Pricelist Mobil Listrik, Promo BYD, Kredit BYD">
+    <meta name="author" content="BYD Sales Indonesia">
+    <meta name="robots" content="index, follow">
+
+    <link rel="canonical" href="https://beyede.vercel.app/pricelist.html">
+
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://beyede.vercel.app/pricelist.html">
+    <meta property="og:title" content="Daftar Harga - BYD Electric | Penawaran Terbaik">
+    <meta property="og:description"
+        content="Cek daftar harga resmi mobil listrik BYD terbaru. Dapatkan penawaran kredit dan promo menarik hari ini.">
+    <meta property="og:image" content="https://beyede.vercel.app/img/about.webp">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:type" content="image/webp">
+
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://beyede.vercel.app/pricelist.html">
+    <meta property="twitter:title" content="Daftar Harga - BYD Electric">
+    <meta property="twitter:description"
+        content="Cek daftar harga resmi mobil listrik BYD terbaru. Dapatkan penawaran kredit dan promo menarik hari ini.">
+    <meta property="twitter:image" content="https://beyede.vercel.app/img/about.webp">
+
+    <link rel="icon" type="image/png" href="img/favicon.png">
+    <link rel="apple-touch-icon" href="img/apple-touch-icon.png">
+
+    <title>Daftar Harga - BYD Electric | Penawaran Terbaik</title>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -44,6 +74,13 @@
             font-family: var(--font-main);
             line-height: 1.6;
             overflow-x: hidden;
+        }
+
+        /* RESET GAMBAR AGAR TIDAK GEPENG */
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
         }
 
         body::before {
@@ -113,8 +150,7 @@
             background: rgba(255, 255, 255, 0.05);
         }
 
-
-        /* --- NAVBAR & MOBILE MENU FIX (Z-Index Fixed) --- */
+        /* --- NAVBAR --- */
         .navbar-wrapper {
             position: sticky;
             top: 0;
@@ -134,7 +170,6 @@
 
         .navbar.menu-active {
             background: #121212 !important;
-            /* Solid Grey saat menu buka */
             backdrop-filter: none;
         }
 
@@ -151,7 +186,6 @@
             letter-spacing: -0.05em;
         }
 
-        /* Desktop Menu */
         .nav-links {
             display: flex;
             gap: 30px;
@@ -180,7 +214,6 @@
             background: var(--accent-cyan);
         }
 
-        /* Mobile Menu Toggle */
         .mobile-toggle {
             display: none;
             cursor: pointer;
@@ -194,7 +227,6 @@
             left: 0;
             width: 100%;
             background: #121212;
-            /* Solid Background */
             border-bottom: 1px solid var(--border-subtle);
             padding: 20px;
             flex-direction: column;
@@ -235,12 +267,8 @@
         }
 
         /* --- PRICE LIST PAGE STYLES --- */
-        /* --- PRICE LIST PAGE STYLES --- */
         .page-header {
-            /* UBAH DARI: 100px 0 60px */
-            /* MENJADI: 40px 0 30px */
             padding: 40px 0 30px;
-
             text-align: center;
             background: radial-gradient(circle at center, rgba(0, 180, 216, 0.1) 0%, transparent 70%);
             position: relative;
@@ -249,9 +277,7 @@
 
         .page-header h1 {
             font-size: 3rem;
-            /* Kurangi jarak bawah agar lebih rapat dengan deskripsi */
             margin-bottom: 10px;
-            /* Tambahkan sedikit jarak atas dari tulisan kecil OTR PRICE LIST */
             margin-top: 10px;
         }
 
@@ -294,15 +320,18 @@
             width: 100%;
             max-width: 400px;
             filter: drop-shadow(0 20px 40px rgba(0, 0, 0, 0.4));
+            transition: 0.3s;
         }
 
         .price-content {
             padding: 40px;
         }
 
-        .price-content h3 {
+        /* Ubah H3 menjadi H2 agar hierarki urut */
+        .price-content h2 {
             font-size: 2rem;
             margin-bottom: 5px;
+            color: var(--text-main);
         }
 
         .price-content p {
@@ -406,7 +435,7 @@
             background: rgba(0, 0, 0, 0.4);
         }
 
-        /* --- FLOATING BUTTONS --- */
+        /* Floating & Footer */
         .floating-container {
             position: fixed;
             bottom: 30px;
@@ -429,6 +458,7 @@
             cursor: pointer;
             transition: 0.3s;
             color: white;
+            padding: 0;
         }
 
         .btn-wa {
@@ -458,7 +488,6 @@
             border-color: var(--accent-cyan);
         }
 
-        /* Footer */
         .site-footer {
             background-color: var(--bg-surface);
             padding: 80px 0 40px;
@@ -527,15 +556,15 @@
             font-size: 0.85rem;
         }
 
-        /* --- MOBILE RESPONSIVE TWEAKS --- */
+        /* Responsive */
         @media (max-width: 1024px) {
             .footer-grid {
                 grid-template-columns: repeat(2, 1fr);
                 gap: 30px;
             }
 
-            /* Navbar Mobile Logic */
-            .nav-links {
+            .nav-links,
+            .btn-nav-desktop {
                 display: none;
             }
 
@@ -543,11 +572,6 @@
                 display: block;
             }
 
-            .btn-nav-desktop {
-                display: none;
-            }
-
-            /* Price Card Tablet */
             .price-item {
                 grid-template-columns: 1fr;
                 margin-bottom: 30px;
@@ -564,37 +588,30 @@
                 grid-template-columns: 1fr;
             }
 
-            /* Header */
             .page-header h1 {
                 font-size: 2.5rem;
                 line-height: 1.2;
             }
 
-            /* Price Card Mobile */
             .price-content {
                 padding: 30px 20px;
             }
 
-            .price-content h3 {
+            .price-content h2 {
                 font-size: 1.8rem;
             }
 
-            /* Table Optimization */
             .price-table th,
             .price-table td {
                 font-size: 0.9rem;
                 padding: 15px 0;
             }
 
-            .variant-name {
-                font-size: 1rem;
-            }
-
+            .variant-name,
             .variant-price {
                 font-size: 1rem;
             }
 
-            /* Form Stack */
             .form-row {
                 flex-direction: column;
             }
@@ -615,7 +632,8 @@
 
     <nav class="navbar">
         <div class="container nav-content">
-            <a href="index.html" class="brand">BYD<span style="color:var(--accent-cyan)">.</span></a>
+            <a href="index.html" class="brand" aria-label="BYD Home">BYD<span
+                    style="color:var(--accent-cyan)">.</span></a>
 
             <div class="nav-links">
                 <a href="index.html">Beranda</a>
@@ -631,7 +649,7 @@
                     Hubungi Sales
                 </a>
 
-                <div class="mobile-toggle" onclick="toggleMenu()">
+                <div class="mobile-toggle" onclick="toggleMenu()" aria-label="Menu Toggle">
                     <i data-lucide="menu" style="width: 28px; height: 28px;"></i>
                 </div>
             </div>
@@ -660,10 +678,10 @@
 
         <div class="price-item">
             <div class="price-img-wrap">
-                <img src="img/seal.webp" alt="BYD Seal">
+                <img src="img/seal.webp" alt="BYD Seal" width="400" height="250" loading="eager">
             </div>
             <div class="price-content">
-                <h3>BYD Seal</h3>
+                <h2>BYD Seal</h2>
                 <p>Performance Sedan | Available in 2 Variants</p>
                 <table class="price-table">
                     <thead>
@@ -688,10 +706,10 @@
 
         <div class="price-item">
             <div class="price-img-wrap">
-                <img src="img/atto3.webp" alt="BYD Atto 3">
+                <img src="img/atto3.webp" alt="BYD Atto 3" width="400" height="250" loading="lazy">
             </div>
             <div class="price-content">
-                <h3>BYD Atto 3</h3>
+                <h2>BYD Atto 3</h2>
                 <p>Smart SUV | Available in 1 Variants</p>
                 <table class="price-table">
                     <thead>
@@ -716,10 +734,10 @@
 
         <div class="price-item">
             <div class="price-img-wrap">
-                <img src="img/dolphin.webp" alt="BYD Dolphin">
+                <img src="img/dolphin.webp" alt="BYD Dolphin" width="400" height="250" loading="lazy">
             </div>
             <div class="price-content">
-                <h3>BYD Dolphin</h3>
+                <h2>BYD Dolphin</h2>
                 <p>Compact Hatchback | Available in 2 Variants</p>
                 <table class="price-table">
                     <thead>
@@ -744,10 +762,11 @@
 
         <div class="price-item">
             <div class="price-img-wrap">
-                <img src="img/m6.webp" alt="BYD M6" style="filter: hue-rotate(200deg);">
+                <img src="img/m6.webp" alt="BYD M6" style="filter: hue-rotate(200deg);" width="400" height="250"
+                    loading="lazy">
             </div>
             <div class="price-content">
-                <h3>BYD M6</h3>
+                <h2>BYD M6</h2>
                 <p>Family MPV | Available in 3 Variants</p>
                 <table class="price-table">
                     <thead>
@@ -776,10 +795,10 @@
 
         <div class="price-item">
             <div class="price-img-wrap">
-                <img src="img/sealion7.webp" alt="BYD Sealion 7">
+                <img src="img/sealion7.webp" alt="BYD Sealion 7" width="400" height="250" loading="lazy">
             </div>
             <div class="price-content">
-                <h3>BYD Sealion 7</h3>
+                <h2>BYD Sealion 7</h2>
                 <p>Performance SUV | Available in 2 Variants</p>
                 <table class="price-table">
                     <thead>
@@ -804,10 +823,10 @@
 
         <div class="price-item">
             <div class="price-img-wrap">
-                <img src="img/atto1.webp" alt="BYD Atto 1">
+                <img src="img/atto1.webp" alt="BYD Atto 1" width="400" height="250" loading="lazy">
             </div>
             <div class="price-content">
-                <h3>BYD Atto 1</h3>
+                <h2>BYD Atto 1</h2>
                 <p>City Electric Car | Available in 2 Variants</p>
                 <table class="price-table">
                     <thead>
@@ -845,21 +864,37 @@
                 Dapatkan perhitungan DP dan Angsuran sesuai budget Anda.
             </p>
 
-            <form class="form-row">
-                <input type="text" placeholder="Nama Anda" class="input-dark">
-                <input type="text" placeholder="Nomor WhatsApp" class="input-dark">
+            <form class="form-row" onsubmit="kirimSimulasiKredit(event)">
+                <input type="text" id="creditName" placeholder="Nama Anda" class="input-dark" required
+                    aria-label="Nama Anda">
+                <input type="text" id="creditPhone" placeholder="Nomor WhatsApp" class="input-dark" required
+                    aria-label="Nomor WhatsApp">
                 <button type="submit" class="btn btn-primary">Hitung Cicilan</button>
             </form>
         </div>
     </section>
+
+    <script>
+        function kirimSimulasiKredit(e) {
+            e.preventDefault();
+
+            const name = document.getElementById('creditName').value;
+            const phone = document.getElementById('creditPhone').value;
+            const targetNumber = '62895639068080';
+            const message = `Halo Sales BYD, perkenalkan saya *${name}* (${phone}). Saya ingin meminta *Penawaran Kredit* dan perhitungan simulasi DP/Angsuran untuk mobil listrik BYD. Mohon informasinya.`;
+            const url = `https://wa.me/${targetNumber}?text=${encodeURIComponent(message)}`;
+
+            window.open(url, '_blank');
+        }
+    </script>
 
     <footer class="site-footer">
         <div class="container">
             <div class="footer-grid">
 
                 <div class="footer-col">
-                    <a href="#" class="brand" style="display:block; margin-bottom:15px;">BYD<span
-                            style="color:var(--accent-cyan)">.</span></a>
+                    <a href="#" class="brand" style="display:block; margin-bottom:15px;"
+                        aria-label="BYD Footer Logo">BYD<span style="color:var(--accent-cyan)">.</span></a>
                     <p class="footer-desc">
                         Build Your Dreams. Pelopor global dalam inovasi teknologi energi bersih dan transportasi masa
                         depan.
@@ -924,12 +959,12 @@
     </footer>
 
     <div class="floating-container">
-        <div class="float-btn btn-scroll" id="scrollTopBtn" onclick="scrollToTop()">
+        <div class="float-btn btn-scroll" id="scrollTopBtn" onclick="scrollToTop()" aria-label="Scroll to Top">
             <i data-lucide="arrow-up"></i>
         </div>
 
         <a href="https://wa.me/62895639068080" target="_blank" class="float-btn btn-wa"
-            title="Hubungi Kami via WhatsApp">
+            title="Hubungi Kami via WhatsApp" aria-label="Chat WhatsApp">
             <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="white"
                 stroke="none">
                 <path
@@ -939,7 +974,6 @@
     </div>
 
     <script>
-        // Init Icons
         lucide.createIcons();
 
         // Mobile Menu Toggle
@@ -950,9 +984,8 @@
             nav.classList.toggle('menu-active');
         }
 
-        // Scroll to Top Logic
+        // Scroll to Top
         const scrollBtn = document.getElementById('scrollTopBtn');
-
         window.onscroll = function () {
             if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
                 scrollBtn.classList.add('show');

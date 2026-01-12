@@ -4,7 +4,37 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BYD Seal - Detail</title>
+
+    <meta name="description"
+        content="Spesifikasi lengkap dan harga BYD Seal. Sedan listrik performa tinggi dengan akselerasi 0-100 km/h dalam 3.8 detik dan jarak tempuh hingga 650 km.">
+    <meta name="keywords"
+        content="BYD Seal, Spesifikasi BYD Seal, Harga BYD Seal Indonesia, Sedan Listrik Sport, BYD Seal AWD, Review BYD Seal">
+    <meta name="author" content="BYD Sales Indonesia">
+    <meta name="robots" content="index, follow">
+
+    <link rel="canonical" href="https://beyede.vercel.app/seal.html">
+
+    <meta property="og:type" content="product">
+    <meta property="og:url" content="https://beyede.vercel.app/seal.html">
+    <meta property="og:title" content="BYD Seal - Sedan Listrik Performa Tinggi | 0-100km/h 3.8s">
+    <meta property="og:description"
+        content="Rasakan sensasi berkendara dengan BYD Seal. Dilengkapi teknologi CTB, Blade Battery, dan jarak tempuh hingga 650 km.">
+    <meta property="og:image" content="https://beyede.vercel.app/img/seal.webp">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:type" content="image/webp">
+
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://beyede.vercel.app/seal.html">
+    <meta property="twitter:title" content="BYD Seal - Sedan Listrik Performa Tinggi">
+    <meta property="twitter:description"
+        content="Rasakan sensasi berkendara dengan BYD Seal. Dilengkapi teknologi CTB, Blade Battery, dan jarak tempuh hingga 650 km.">
+    <meta property="twitter:image" content="https://beyede.vercel.app/img/seal.webp">
+
+    <link rel="icon" type="image/png" href="img/favicon.png">
+    <link rel="apple-touch-icon" href="img/apple-touch-icon.png">
+
+    <title>BYD Seal - Detail Spesifikasi & Harga | BYD Electric</title>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -33,12 +63,23 @@
             box-sizing: border-box;
         }
 
+        html {
+            scroll-behavior: smooth;
+        }
+
         body {
             background-color: var(--bg-dark);
             color: var(--text-main);
             font-family: var(--font-main);
             line-height: 1.6;
             overflow-x: hidden;
+        }
+
+        /* RESET GAMBAR AGAR TIDAK GEPENG */
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
         }
 
         /* Navbar Styles */
@@ -63,7 +104,6 @@
             backdrop-filter: none;
         }
 
-        /* CONTAINER DEFAULT (Desktop/Tablet) */
         .container {
             max-width: 1200px;
             margin: 0 auto;
@@ -124,8 +164,6 @@
         }
 
         /* --- DETAIL PAGE STYLES --- */
-
-        /* 1. Hero Compact */
         .detail-hero {
             padding: 40px 0 20px;
             text-align: center;
@@ -152,7 +190,6 @@
             filter: drop-shadow(0 20px 40px rgba(0, 0, 0, 0.5));
         }
 
-        /* 2. Content & Interior */
         .info-section {
             padding: 60px 0;
         }
@@ -169,7 +206,6 @@
             margin-bottom: 15px;
         }
 
-        /* Default Desktop: Justify */
         .info-text p {
             color: var(--text-muted);
             text-align: justify;
@@ -182,7 +218,6 @@
             border: 1px solid var(--border-subtle);
         }
 
-        /* 3. Specs Table Premium */
         .specs-section {
             padding-bottom: 80px;
         }
@@ -393,7 +428,7 @@
             display: inline-flex;
         }
 
-        /* --- MOBILE RESPONSIVE TWEAKS (OPTIMIZED) --- */
+        /* --- MOBILE RESPONSIVE TWEAKS --- */
         @media (max-width: 1024px) {
 
             .nav-links,
@@ -405,7 +440,6 @@
                 display: block;
             }
 
-            /* Typography & Spacing */
             .detail-hero h1 {
                 font-size: 2.2rem;
             }
@@ -415,13 +449,11 @@
                 margin-bottom: 20px;
             }
 
-            /* Hero Image: Hapus padding ekstra agar sejajar dengan teks */
             .hero-img {
                 margin-top: 10px;
                 width: 100%;
             }
 
-            /* Info Section */
             .info-section {
                 padding: 40px 0;
             }
@@ -440,22 +472,18 @@
                 font-size: 1.8rem;
             }
 
-            /* Text Align Left di Mobile */
             .info-text p {
                 text-align: left;
             }
 
-            /* Tabel Spesifikasi Mobile */
             .specs-section {
                 padding-bottom: 60px;
             }
 
-            /* Kurangi padding wrapper luar di mobile */
             .specs-table-wrapper {
                 padding: 5px;
             }
 
-            /* Kurangi padding sel di mobile */
             .specs-table td {
                 padding: 12px 10px;
             }
@@ -480,7 +508,6 @@
             }
         }
 
-        /* BREAKPOINT TAMBAHAN UNTUK HP KECIL */
         @media (max-width: 480px) {
             .footer-grid {
                 grid-template-columns: 1fr;
@@ -526,7 +553,7 @@
     <section class="detail-hero container">
         <h1>BYD Seal</h1>
         <p>Performance Sedan. 0-100km/h dalam 3.8 Detik.</p>
-        <img src="img/seal.webp" alt="BYD Seal" class="hero-img">
+        <img src="img/seal.webp" alt="BYD Seal White" width="800" height="450" class="hero-img" loading="eager">
     </section>
 
     <section class="info-section container">
@@ -536,8 +563,7 @@
                 <p>
                     BYD Seal dirancang dengan estetika "Ocean Aesthetics" yang memberikan tampilan dinamis dan
                     aerodinamis. Dilengkapi dengan teknologi **CTB (Cell-to-Body)**, baterai menjadi bagian dari
-                    struktur rangka
-                    mobil, meningkatkan keamanan dan kekakuan bodi secara signifikan.
+                    struktur rangka mobil, meningkatkan keamanan dan kekakuan bodi secara signifikan.
                 </p>
                 <p>
                     Interior mewah dengan **Rotating Screen 15.6 inci**, Panoramic Glass Roof, dan kursi sport berbahan
@@ -545,7 +571,8 @@
                 </p>
             </div>
             <div class="info-img-wrapper">
-                <img src="img/bydseal.webp" alt="BYD Seal" class="info-img">
+                <img src="img/bydseal.webp" alt="Interior BYD Seal" width="600" height="400" class="info-img"
+                    loading="lazy">
             </div>
         </div>
     </section>
@@ -604,8 +631,8 @@
         <div class="container">
             <div class="footer-grid">
                 <div class="footer-col">
-                    <a href="#" class="brand" style="display:block; margin-bottom:15px;">BYD<span
-                            style="color:var(--accent-cyan)">.</span></a>
+                    <a href="#" class="brand" style="display:block; margin-bottom:15px;"
+                        aria-label="BYD Footer Logo">BYD<span style="color:var(--accent-cyan)">.</span></a>
                     <p class="footer-desc">
                         Build Your Dreams. Pelopor global dalam inovasi teknologi energi bersih dan transportasi masa
                         depan.
@@ -670,12 +697,16 @@
 
     <script>
         lucide.createIcons();
+
+        // Navbar Logic
         function toggleMenu() {
             const menu = document.getElementById('mobileMenu');
             const nav = document.querySelector('.navbar');
             menu.classList.toggle('open');
             nav.classList.toggle('menu-active');
         }
+
+        // Scroll Top Logic
         const scrollBtn = document.getElementById('scrollTopBtn');
         window.onscroll = function () {
             if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {

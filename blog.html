@@ -4,7 +4,37 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Berita & Artikel - BYD Electric</title>
+
+    <meta name="description"
+        content="Berita terbaru, artikel, dan tips seputar mobil listrik BYD. Dapatkan wawasan tentang teknologi Blade Battery, perawatan EV, dan update harga terbaru.">
+    <meta name="keywords"
+        content="Berita BYD, Artikel Mobil Listrik, Tips Perawatan EV, Review BYD Seal, Teknologi Blade Battery, Info Otomotif Indonesia">
+    <meta name="author" content="BYD Sales Indonesia">
+    <meta name="robots" content="index, follow">
+
+    <link rel="canonical" href="https://beyede.vercel.app/blog.html">
+
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://beyede.vercel.app/blog.html">
+    <meta property="og:title" content="Berita & Artikel - BYD Electric | Wawasan Masa Depan">
+    <meta property="og:description"
+        content="Dapatkan berita terbaru dan tips perawatan mobil listrik BYD. Panduan lengkap untuk pemilik dan penggemar EV.">
+    <meta property="og:image" content="https://beyede.vercel.app/img/about.webp">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:type" content="image/webp">
+
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://beyede.vercel.app/blog.html">
+    <meta property="twitter:title" content="Berita & Artikel - BYD Electric">
+    <meta property="twitter:description"
+        content="Dapatkan berita terbaru dan tips perawatan mobil listrik BYD. Panduan lengkap untuk pemilik dan penggemar EV.">
+    <meta property="twitter:image" content="https://beyede.vercel.app/img/about.webp">
+
+    <link rel="icon" type="image/png" href="img/favicon.png">
+    <link rel="apple-touch-icon" href="img/apple-touch-icon.png">
+
+    <title>Berita & Artikel - BYD Electric | Wawasan Masa Depan</title>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -44,6 +74,13 @@
             font-family: var(--font-main);
             line-height: 1.6;
             overflow-x: hidden;
+        }
+
+        /* RESET GAMBAR AGAR TIDAK GEPENG */
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
         }
 
         body::before {
@@ -113,7 +150,7 @@
             background: rgba(255, 255, 255, 0.05);
         }
 
-        /* --- NAVBAR & MOBILE MENU FIX (Z-Index Fixed) --- */
+        /* --- NAVBAR --- */
         .navbar-wrapper {
             position: sticky;
             top: 0;
@@ -133,7 +170,6 @@
 
         .navbar.menu-active {
             background: #121212 !important;
-            /* Solid Grey saat menu buka */
             backdrop-filter: none;
         }
 
@@ -150,7 +186,6 @@
             letter-spacing: -0.05em;
         }
 
-        /* Desktop Menu */
         .nav-links {
             display: flex;
             gap: 30px;
@@ -179,7 +214,6 @@
             background: var(--accent-cyan);
         }
 
-        /* Mobile Menu Toggle */
         .mobile-toggle {
             display: none;
             cursor: pointer;
@@ -193,7 +227,6 @@
             left: 0;
             width: 100%;
             background: #121212;
-            /* Solid Background */
             border-bottom: 1px solid var(--border-subtle);
             padding: 20px;
             flex-direction: column;
@@ -233,13 +266,9 @@
             }
         }
 
-        /* --- BLOG SPECIFIC STYLES --- */
-        /* --- BLOG SPECIFIC STYLES --- */
+        /* --- BLOG PAGE STYLES --- */
         .page-header {
-            /* UBAH DARI: 100px 0 60px */
-            /* MENJADI: 40px 0 30px */
             padding: 40px 0 30px;
-
             text-align: center;
             background: radial-gradient(circle at center, rgba(0, 180, 216, 0.1) 0%, transparent 70%);
             position: relative;
@@ -248,9 +277,7 @@
 
         .page-header h1 {
             font-size: 3rem;
-            /* Kurangi jarak bawah judul agar lebih rapat dengan deskripsi */
             margin-bottom: 10px;
-            /* Tambahkan sedikit jarak atas */
             margin-top: 10px;
         }
 
@@ -349,11 +376,13 @@
             letter-spacing: 1px;
         }
 
+        /* H2 untuk judul artikel agar urut (H1 -> H2) */
         .blog-title {
             font-size: 1.25rem;
             margin-bottom: 15px;
             line-height: 1.4;
             color: var(--text-main);
+            font-weight: 700;
         }
 
         .blog-excerpt {
@@ -377,7 +406,7 @@
             gap: 8px;
         }
 
-        /* --- UPDATED NEWSLETTER SECTION --- */
+        /* Newsletter */
         .newsletter-section {
             padding: 60px 0 100px;
             position: relative;
@@ -465,7 +494,7 @@
             border-color: var(--accent-cyan);
         }
 
-        /* --- FLOATING BUTTONS --- */
+        /* Floating & Footer */
         .floating-container {
             position: fixed;
             bottom: 30px;
@@ -488,6 +517,7 @@
             cursor: pointer;
             transition: 0.3s;
             color: white;
+            padding: 0;
         }
 
         .btn-wa {
@@ -517,7 +547,6 @@
             border-color: var(--accent-cyan);
         }
 
-        /* Footer */
         .site-footer {
             background-color: var(--bg-surface);
             padding: 80px 0 40px;
@@ -586,7 +615,7 @@
             font-size: 0.85rem;
         }
 
-        /* --- MOBILE RESPONSIVE TWEAKS --- */
+        /* Responsive */
         @media (max-width: 1024px) {
             .footer-grid {
                 grid-template-columns: repeat(2, 1fr);
@@ -608,17 +637,13 @@
                 margin: 0 auto;
             }
 
-            /* Navbar Mobile Logic */
-            .nav-links {
+            .nav-links,
+            .btn-nav-desktop {
                 display: none;
             }
 
             .mobile-toggle {
                 display: block;
-            }
-
-            .btn-nav-desktop {
-                display: none;
             }
         }
 
@@ -627,24 +652,16 @@
                 grid-template-columns: 1fr;
             }
 
-            /* Header Proporsional */
             .page-header h1 {
                 font-size: 2.2rem;
-                line-height: 1.2;
             }
 
-            /* Blog Grid Proporsional (1 Column) */
             .blog-grid {
                 grid-template-columns: 1fr;
             }
 
-            /* Newsletter Proporsional */
             .newsletter-card {
                 padding: 40px 20px;
-            }
-
-            .nl-content h2 {
-                font-size: 1.8rem;
             }
 
             .container {
@@ -658,7 +675,8 @@
 
     <nav class="navbar">
         <div class="container nav-content">
-            <a href="index.html" class="brand">BYD<span style="color:var(--accent-cyan)">.</span></a>
+            <a href="index.html" class="brand" aria-label="BYD Home">BYD<span
+                    style="color:var(--accent-cyan)">.</span></a>
 
             <div class="nav-links">
                 <a href="index.html">Beranda</a>
@@ -674,7 +692,7 @@
                     Hubungi Sales
                 </a>
 
-                <div class="mobile-toggle" onclick="toggleMenu()">
+                <div class="mobile-toggle" onclick="toggleMenu()" aria-label="Menu Toggle">
                     <i data-lucide="menu" style="width: 28px; height: 28px;"></i>
                 </div>
             </div>
@@ -708,114 +726,120 @@
 
         <div class="blog-grid" id="blogContainer">
 
-            <div class="blog-card">
-                <img src="img/artikel1.webp" alt="BYD Seal Review" class="blog-img">
+            <article class="blog-card">
+                <img src="img/artikel1.webp" alt="BYD Seal Review" class="blog-img" width="400" height="200"
+                    loading="eager">
                 <div class="blog-content">
                     <span class="blog-meta">Review • 12 Jan 2026</span>
-                    <h3 class="blog-title">Review Lengkap BYD Seal: Supercar Killer Harga Terjangkau?</h3>
+                    <h2 class="blog-title">Review Lengkap BYD Seal: Supercar Killer Harga Terjangkau?</h2>
                     <p class="blog-excerpt">Mengupas tuntas performa akselerasi 3.8 detik dan kenyamanan interior
                         premium dari BYD Seal.</p>
                     <a href="artikel1.html" class="read-more">Baca Selengkapnya <i data-lucide="arrow-right"
                             style="width:16px"></i></a>
                 </div>
-            </div>
+            </article>
 
-            <div class="blog-card">
-                <img src="img/artikel2.webp" alt="Blade Battery" class="blog-img"
-                    style="filter: hue-rotate(90deg) grayscale(40%);">
+            <article class="blog-card">
+                <img src="img/artikel2.webp" alt="Blade Battery" class="blog-img" width="400" height="200"
+                    loading="lazy">
                 <div class="blog-content">
                     <span class="blog-meta">Teknologi • 10 Jan 2026</span>
-                    <h3 class="blog-title">Mengenal Blade Battery: Teknologi Baterai Paling Aman di Dunia</h3>
+                    <h2 class="blog-title">Mengenal Blade Battery: Teknologi Baterai Paling Aman di Dunia</h2>
                     <p class="blog-excerpt">Mengapa baterai LFP BYD lolos uji tusuk paku tanpa terbakar? Simak
                         penjelasan teknologinya di sini.</p>
                     <a href="artikel2.html" class="read-more">Baca Selengkapnya <i data-lucide="arrow-right"
                             style="width:16px"></i></a>
                 </div>
-            </div>
+            </article>
 
-            <div class="blog-card">
-                <img src="img/artikel3.webp" alt="BYD M6 Launch" class="blog-img">
+            <article class="blog-card">
+                <img src="img/artikel3.webp" alt="BYD M6 Launch" class="blog-img" width="400" height="200"
+                    loading="lazy">
                 <div class="blog-content">
                     <span class="blog-meta">Berita • 08 Jan 2026</span>
-                    <h3 class="blog-title">BYD M6 Resmi Meluncur: MPV Listrik Pertama untuk Keluarga Indonesia</h3>
+                    <h2 class="blog-title">BYD M6 Resmi Meluncur: MPV Listrik Pertama untuk Keluarga Indonesia</h2>
                     <p class="blog-excerpt">Solusi mobilitas 7-seater bertenaga listrik dengan harga mulai 300 jutaan.
                         Cocok untuk mudik?</p>
                     <a href="artikel3.html" class="read-more">Baca Selengkapnya <i data-lucide="arrow-right"
                             style="width:16px"></i></a>
                 </div>
-            </div>
+            </article>
 
-            <div class="blog-card">
-                <img src="img/artikel4.webp" alt="Tips Charging" class="blog-img">
+            <article class="blog-card">
+                <img src="img/artikel4.webp" alt="Tips Charging" class="blog-img" width="400" height="200"
+                    loading="lazy">
                 <div class="blog-content">
                     <span class="blog-meta">Tips • 05 Jan 2026</span>
-                    <h3 class="blog-title">5 Tips Mengisi Daya Mobil Listrik Agar Baterai Awet Bertahun-tahun</h3>
+                    <h2 class="blog-title">5 Tips Mengisi Daya Mobil Listrik Agar Baterai Awet Bertahun-tahun</h2>
                     <p class="blog-excerpt">Cara menjaga kesehatan baterai EV (State of Health) agar tetap prima meski
                         sering dipakai harian.</p>
                     <a href="artikel4.html" class="read-more">Baca Selengkapnya <i data-lucide="arrow-right"
                             style="width:16px"></i></a>
                 </div>
-            </div>
+            </article>
 
-            <div class="blog-card">
-                <img src="img/artikel5.webp" alt="Atto 3 Features" class="blog-img">
+            <article class="blog-card">
+                <img src="img/artikel5.webp" alt="Atto 3 Features" class="blog-img" width="400" height="200"
+                    loading="lazy">
                 <div class="blog-content">
                     <span class="blog-meta">Review • 01 Jan 2026</span>
-                    <h3 class="blog-title">Fitur Unik BYD Atto 3 yang Jarang Diketahui Orang</h3>
+                    <h2 class="blog-title">Fitur Unik BYD Atto 3 yang Jarang Diketahui Orang</h2>
                     <p class="blog-excerpt">Dari senar gitar di pintu hingga layar putar, inilah detail unik yang
                         membuat Atto 3 berbeda.</p>
                     <a href="artikel5.html" class="read-more">Baca Selengkapnya <i data-lucide="arrow-right"
                             style="width:16px"></i></a>
                 </div>
-            </div>
+            </article>
 
-            <div class="blog-card">
-                <img src="img/artikel6.webp" alt="Cost Comparison" class="blog-img">
+            <article class="blog-card">
+                <img src="img/artikel6.webp" alt="Cost Comparison" class="blog-img" width="400" height="200"
+                    loading="lazy">
                 <div class="blog-content">
                     <span class="blog-meta">Edukasi • 28 Des 2025</span>
-                    <h3 class="blog-title">Hitungan Biaya Listrik vs Bensin: Seberapa Hemat Pakai EV?</h3>
+                    <h2 class="blog-title">Hitungan Biaya Listrik vs Bensin: Seberapa Hemat Pakai EV?</h2>
                     <p class="blog-excerpt">Perbandingan real biaya operasional mobil listrik BYD Dolphin vs mobil
                         bensin sekelasnya.</p>
                     <a href="artikel6.html" class="read-more">Baca Selengkapnya <i data-lucide="arrow-right"
                             style="width:16px"></i></a>
                 </div>
-            </div>
+            </article>
 
-            <div class="blog-card">
-                <img src="img/artikel7.webp" alt="Sales Record" class="blog-img" style="filter: sepia(50%);">
+            <article class="blog-card">
+                <img src="img/artikel7.webp" alt="Sales Record" class="blog-img" width="400" height="200"
+                    loading="lazy">
                 <div class="blog-content">
                     <span class="blog-meta">Berita • 20 Des 2025</span>
-                    <h3 class="blog-title">BYD Pecahkan Rekor Penjualan Mobil Listrik Global Tahun 2025</h3>
+                    <h2 class="blog-title">BYD Pecahkan Rekor Penjualan Mobil Listrik Global Tahun 2025</h2>
                     <p class="blog-excerpt">Mengalahkan kompetitor besar, BYD kini menjadi raja kendaraan energi baru di
                         dunia.</p>
                     <a href="artikel7.html" class="read-more">Baca Selengkapnya <i data-lucide="arrow-right"
                             style="width:16px"></i></a>
                 </div>
-            </div>
+            </article>
 
-            <div class="blog-card">
-                <img src="img/artikel8.webp" alt="Service" class="blog-img" style="filter: grayscale(80%);">
+            <article class="blog-card">
+                <img src="img/artikel8.webp" alt="Service" class="blog-img" width="400" height="200" loading="lazy">
                 <div class="blog-content">
                     <span class="blog-meta">Service • 15 Des 2025</span>
-                    <h3 class="blog-title">Biaya Service Mobil Listrik BYD: Gratis Hingga 4 Tahun?</h3>
+                    <h2 class="blog-title">Biaya Service Mobil Listrik BYD: Gratis Hingga 4 Tahun?</h2>
                     <p class="blog-excerpt">Simak paket layanan purna jual yang ditawarkan BYD untuk ketenangan pikiran
                         konsumen.</p>
                     <a href="artikel8.html" class="read-more">Baca Selengkapnya <i data-lucide="arrow-right"
                             style="width:16px"></i></a>
                 </div>
-            </div>
+            </article>
 
-            <div class="blog-card">
-                <img src="img/artikel9.webp" alt="Future Tech" class="blog-img" style="filter: hue-rotate(180deg);">
+            <article class="blog-card">
+                <img src="img/artikel9.webp" alt="Future Tech" class="blog-img" width="400" height="200" loading="lazy">
                 <div class="blog-content">
                     <span class="blog-meta">Masa Depan • 10 Des 2025</span>
-                    <h3 class="blog-title">Masa Depan Berkendara Otonom Bersama BYD Intelligence</h3>
+                    <h2 class="blog-title">Masa Depan Berkendara Otonom Bersama BYD Intelligence</h2>
                     <p class="blog-excerpt">Bagaimana fitur ADAS dan DiPilot BYD mengubah cara kita berkendara menjadi
                         lebih aman.</p>
                     <a href="artikel9.html" class="read-more">Baca Selengkapnya <i data-lucide="arrow-right"
                             style="width:16px"></i></a>
                 </div>
-            </div>
+            </article>
 
         </div>
     </div>
@@ -827,20 +851,35 @@
                 <h2>Jangan Lewatkan Update</h2>
                 <p>Dapatkan berita eksklusif teknologi EV dan penawaran promo BYD terbaru langsung di inbox Anda.</p>
             </div>
-            <form class="nl-form">
-                <input type="email" placeholder="Alamat Email Anda" class="nl-input" required>
+
+            <form class="nl-form" onsubmit="subscribeNewsletter(event)">
+                <input type="email" id="nlEmail" placeholder="Alamat Email Anda" class="nl-input" required
+                    aria-label="Alamat Email">
                 <button type="submit" class="btn btn-primary">Langganan</button>
             </form>
         </div>
     </section>
+
+    <script>
+        function subscribeNewsletter(e) {
+            e.preventDefault();
+
+            const email = document.getElementById('nlEmail').value;
+            const targetNumber = '62895639068080';
+            const message = `Halo Admin BYD, saya ingin berlangganan *Newsletter* untuk mendapatkan update berita dan promo terbaru. Email saya: ${email}`;
+            const url = `https://wa.me/${targetNumber}?text=${encodeURIComponent(message)}`;
+
+            window.open(url, '_blank');
+        }
+    </script>
 
     <footer class="site-footer">
         <div class="container">
             <div class="footer-grid">
 
                 <div class="footer-col">
-                    <a href="#" class="brand" style="display:block; margin-bottom:15px;">BYD<span
-                            style="color:var(--accent-cyan)">.</span></a>
+                    <a href="#" class="brand" style="display:block; margin-bottom:15px;"
+                        aria-label="BYD Footer Logo">BYD<span style="color:var(--accent-cyan)">.</span></a>
                     <p class="footer-desc">
                         Build Your Dreams. Pelopor global dalam inovasi teknologi energi bersih dan transportasi masa
                         depan.
@@ -905,16 +944,16 @@
     </footer>
 
     <div class="floating-container">
-        <div class="float-btn btn-scroll" id="scrollTopBtn" onclick="scrollToTop()">
+        <div class="float-btn btn-scroll" id="scrollTopBtn" onclick="scrollToTop()" aria-label="Scroll to Top">
             <i data-lucide="arrow-up"></i>
         </div>
 
         <a href="https://wa.me/62895639068080" target="_blank" class="float-btn btn-wa"
-            title="Hubungi Kami via WhatsApp">
-            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="white"
-                stroke="none">
+            title="Hubungi Kami via WhatsApp" aria-label="Chat WhatsApp">
+            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-whatsapp"
+                viewBox="0 0 16 16">
                 <path
-                    d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
+                    d="M13.601 2.326A7.854 7.854 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.933 7.933 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.898 7.898 0 0 0 13.6 2.326zM7.994 14.521a6.573 6.573 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.557 6.557 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592zm3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.729.729 0 0 0-.529.247c-.182.198-.691.677-.691 1.654 0 .977.71 1.916.81 2.049.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232z" />
             </svg>
         </a>
     </div>
@@ -922,7 +961,6 @@
     <script>
         lucide.createIcons();
 
-        // Mobile Menu Toggle
         function toggleMenu() {
             const menu = document.getElementById('mobileMenu');
             const nav = document.querySelector('.navbar');
@@ -930,7 +968,6 @@
             nav.classList.toggle('menu-active');
         }
 
-        // Scroll to Top
         const scrollBtn = document.getElementById('scrollTopBtn');
         window.onscroll = function () {
             if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
@@ -944,7 +981,6 @@
             window.scrollTo({ top: 0, behavior: 'smooth' });
         }
 
-        // Simple Search
         const searchInput = document.getElementById('searchInput');
         const blogContainer = document.getElementById('blogContainer');
         const blogCards = blogContainer.getElementsByClassName('blog-card');

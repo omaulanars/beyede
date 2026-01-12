@@ -4,7 +4,37 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BYD M6 - Detail</title>
+
+    <meta name="description"
+        content="BYD M6, MPV Listrik 7-Seater pertama di Indonesia. Ruang kabin luas, V2L, dan jarak tempuh hingga 530 km. Solusi mobilitas keluarga modern.">
+    <meta name="keywords"
+        content="BYD M6, MPV Listrik, Mobil Listrik Keluarga, Harga BYD M6, Spesifikasi BYD M6, 7 Seater Electric Car">
+    <meta name="author" content="BYD Sales Indonesia">
+    <meta name="robots" content="index, follow">
+
+    <link rel="canonical" href="https://beyede.vercel.app/m6.html">
+
+    <meta property="og:type" content="product">
+    <meta property="og:url" content="https://beyede.vercel.app/m6.html">
+    <meta property="og:title" content="BYD M6 - MPV Listrik Keluarga 7 Seater">
+    <meta property="og:description"
+        content="Kenyamanan premium untuk seluruh keluarga dengan BYD M6. MPV listrik murni dengan jarak tempuh 530 km.">
+    <meta property="og:image" content="https://beyede.vercel.app/img/m6.webp">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:type" content="image/webp">
+
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://beyede.vercel.app/m6.html">
+    <meta property="twitter:title" content="BYD M6 - MPV Listrik Keluarga 7 Seater">
+    <meta property="twitter:description"
+        content="Kenyamanan premium untuk seluruh keluarga dengan BYD M6. MPV listrik murni dengan jarak tempuh 530 km.">
+    <meta property="twitter:image" content="https://beyede.vercel.app/img/m6.webp">
+
+    <link rel="icon" type="image/png" href="img/favicon.png">
+    <link rel="apple-touch-icon" href="img/apple-touch-icon.png">
+
+    <title>BYD M6 - Detail Spesifikasi & Harga | BYD Electric</title>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -33,12 +63,23 @@
             box-sizing: border-box;
         }
 
+        html {
+            scroll-behavior: smooth;
+        }
+
         body {
             background-color: var(--bg-dark);
             color: var(--text-main);
             font-family: var(--font-main);
             line-height: 1.6;
             overflow-x: hidden;
+        }
+
+        /* RESET GAMBAR AGAR TIDAK GEPENG */
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
         }
 
         /* Navbar Styles */
@@ -63,7 +104,6 @@
             backdrop-filter: none;
         }
 
-        /* CONTAINER DEFAULT (Desktop/Tablet) */
         .container {
             max-width: 1200px;
             margin: 0 auto;
@@ -124,7 +164,6 @@
         }
 
         /* --- DETAIL PAGE STYLES --- */
-
         .detail-hero {
             padding: 40px 0 20px;
             text-align: center;
@@ -243,7 +282,7 @@
             font-weight: bold;
         }
 
-        /* Footer */
+        /* Footer & Utils */
         .site-footer {
             background-color: var(--bg-surface);
             padding: 80px 0 40px;
@@ -389,7 +428,7 @@
             display: inline-flex;
         }
 
-        /* --- MOBILE RESPONSIVE TWEAKS (OPTIMIZED) --- */
+        /* --- MOBILE RESPONSIVE TWEAKS --- */
         @media (max-width: 1024px) {
 
             .nav-links,
@@ -514,7 +553,7 @@
     <section class="detail-hero container">
         <h1>BYD M6</h1>
         <p>Pure Electric MPV. Kenyamanan Premium untuk Seluruh Keluarga.</p>
-        <img src="img/m6.webp" alt="BYD M6" class="hero-img">
+        <img src="img/m6.webp" alt="BYD M6 White" width="800" height="450" class="hero-img" loading="eager">
     </section>
 
     <section class="info-section container">
@@ -535,7 +574,8 @@
                 </p>
             </div>
             <div class="info-img-wrapper">
-                <img src="img/bydm6.webp" alt="BYD M6" class="info-img">
+                <img src="img/bydm6.webp" alt="Interior BYD M6" width="600" height="400" class="info-img"
+                    loading="lazy">
             </div>
         </div>
     </section>
@@ -594,8 +634,8 @@
         <div class="container">
             <div class="footer-grid">
                 <div class="footer-col">
-                    <a href="#" class="brand" style="display:block; margin-bottom:15px;">BYD<span
-                            style="color:var(--accent-cyan)">.</span></a>
+                    <a href="#" class="brand" style="display:block; margin-bottom:15px;"
+                        aria-label="BYD Footer Logo">BYD<span style="color:var(--accent-cyan)">.</span></a>
                     <p class="footer-desc">
                         Build Your Dreams. Pelopor global dalam inovasi teknologi energi bersih dan transportasi masa
                         depan.
@@ -660,12 +700,16 @@
 
     <script>
         lucide.createIcons();
+
+        // Navbar Logic
         function toggleMenu() {
             const menu = document.getElementById('mobileMenu');
             const nav = document.querySelector('.navbar');
             menu.classList.toggle('open');
             nav.classList.toggle('menu-active');
         }
+
+        // Scroll Top Logic
         const scrollBtn = document.getElementById('scrollTopBtn');
         window.onscroll = function () {
             if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
