@@ -214,7 +214,6 @@
             background: var(--accent-cyan);
         }
 
-        /* FIX: Changed div to button for accessibility */
         .mobile-toggle {
             display: none;
             cursor: pointer;
@@ -500,7 +499,7 @@
             background: rgba(0, 0, 0, 0.4);
         }
 
-        /* --- FLOATING BUTTONS (FIX) --- */
+        /* --- FLOATING BUTTONS --- */
         .floating-container {
             position: fixed;
             bottom: 30px;
@@ -512,7 +511,6 @@
             align-items: flex-end;
         }
 
-        /* FIX: Changed div to button/a for a11y */
         .float-btn {
             width: 60px;
             height: 60px;
@@ -560,7 +558,6 @@
             margin-bottom: 60px;
         }
 
-        /* FIX: H3 for hierarchy */
         .footer-col h3 {
             color: var(--text-main);
             font-size: 1.1rem;
@@ -601,13 +598,11 @@
             margin-top: 3px;
         }
 
-        /* FIX: Contrast Color */
         .footer-bottom {
             text-align: center;
             padding-top: 40px;
             border-top: 1px solid rgba(255, 255, 255, 0.05);
             color: #A0A0A0;
-            /* Improved Contrast */
             font-size: 0.85rem;
         }
 
@@ -729,7 +724,7 @@
 
                     <div class="hero-image-wrapper">
                         <img src="img/mobil_11zon.webp" alt="BYD Seal White Performance Electric Sedan" width="600"
-                            height="400" loading="eager">
+                            height="400" loading="eager" fetchpriority="high">
 
                         <div class="spec-float sf-1">
                             <i data-lucide="battery-charging"></i>
