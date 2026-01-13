@@ -327,6 +327,54 @@
             text-align: justify;
         }
 
+        /* --- NEW: VALUES SECTION STYLES --- */
+        .values-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 20px;
+        }
+
+        .value-card {
+            background: var(--bg-surface);
+            border: 1px solid var(--border-subtle);
+            border-radius: 20px;
+            padding: 40px 30px;
+            transition: 0.3s;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .value-card:hover {
+            transform: translateY(-5px);
+            border-color: rgba(255, 255, 255, 0.2);
+            background: var(--bg-elevated);
+        }
+
+        .v-icon-box {
+            width: 60px;
+            height: 60px;
+            border-radius: 15px;
+            background: rgba(0, 180, 216, 0.1);
+            color: var(--accent-cyan);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 25px;
+        }
+
+        .value-card h3 {
+            font-size: 1.3rem;
+            margin-bottom: 15px;
+            color: var(--text-main);
+        }
+
+        .value-card p {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+
         /* Stats Grid */
         .stats-grid {
             display: grid;
@@ -708,8 +756,49 @@
     <section class="content-section">
         <div class="container">
             <div class="section-title" style="text-align: center; margin-bottom: 50px;">
+                <span style="color:var(--accent-cyan); font-weight:600; letter-spacing:1px; font-size:0.9rem;">OUR
+                    DNA</span>
+                <h2 style="font-size: 2.2rem; margin-bottom: 10px; color: var(--text-main);">Filosofi & Nilai Inti</h2>
+                <p style="color:var(--text-muted); max-width:600px; margin:0 auto;">Pilar utama yang menggerakkan setiap
+                    inovasi dan langkah kami di BYD.</p>
+            </div>
+
+            <div class="values-grid">
+                <div class="value-card">
+                    <div class="v-icon-box">
+                        <i data-lucide="lightbulb" style="width:28px; height:28px;"></i>
+                    </div>
+                    <h3>Inovasi Teknologi</h3>
+                    <p>Kami percaya teknologi adalah kunci masa depan. e-Platform 3.0 dan Blade Battery adalah bukti
+                        komitmen kami untuk terus melampaui batas kemungkinan.</p>
+                </div>
+
+                <div class="value-card">
+                    <div class="v-icon-box">
+                        <i data-lucide="leaf" style="width:28px; height:28px;"></i>
+                    </div>
+                    <h3>Masa Depan Hijau</h3>
+                    <p>Misi kami adalah "Cool the Earth by 1°C". Setiap kendaraan listrik yang kami produksi adalah
+                        langkah nyata menuju ekosistem transportasi bebas emisi.</p>
+                </div>
+
+                <div class="value-card">
+                    <div class="v-icon-box">
+                        <i data-lucide="globe" style="width:28px; height:28px;"></i>
+                    </div>
+                    <h3>Dampak Global</h3>
+                    <p>Hadir di lebih dari 70 negara dan 400 kota. BYD membawa solusi mobilitas cerdas ke seluruh
+                        penjuru dunia, termasuk Indonesia.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="content-section" style="background: var(--bg-surface);">
+        <div class="container">
+            <div class="section-title" style="text-align: center; margin-bottom: 50px;">
                 <h2>Mengapa Memilih Kami?</h2>
-                <p>Dealer Resmi BYD Terpercaya</p>
+                <p style="color:var(--text-muted);">Dealer Resmi BYD Terpercaya</p>
             </div>
 
             <div class="stats-grid">

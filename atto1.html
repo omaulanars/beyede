@@ -4,7 +4,37 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BYD Atto 1 - Detail</title>
+
+    <meta name="description"
+        content="Spesifikasi lengkap BYD Atto 1 (Seagull). Mobil listrik city car yang ringkas, cerdas, dan lincah dengan jarak tempuh hingga 405 km.">
+    <meta name="keywords"
+        content="BYD Atto 1, BYD Seagull Indonesia, Spesifikasi Atto 1, Harga BYD Atto 1, City Car Listrik, Mobil Listrik Murah">
+    <meta name="author" content="BYD Sales Indonesia">
+    <meta name="robots" content="index, follow">
+
+    <link rel="canonical" href="https://beyede.vercel.app/atto1.html">
+
+    <meta property="og:type" content="product">
+    <meta property="og:url" content="https://beyede.vercel.app/atto1.html">
+    <meta property="og:title" content="BYD Atto 1 - City Electric Car | Compact & Agile">
+    <meta property="og:description"
+        content="Mobilitas perkotaan jadi lebih cerdas dengan BYD Atto 1. Ringkas di luar, luas di dalam, dan aman dengan Blade Battery.">
+    <meta property="og:image" content="https://beyede.vercel.app/img/atto1.webp">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:type" content="image/webp">
+
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://beyede.vercel.app/atto1.html">
+    <meta property="twitter:title" content="BYD Atto 1 - City Electric Car">
+    <meta property="twitter:description"
+        content="Mobilitas perkotaan jadi lebih cerdas dengan BYD Atto 1. Ringkas di luar, luas di dalam.">
+    <meta property="twitter:image" content="https://beyede.vercel.app/img/atto1.webp">
+
+    <link rel="icon" type="image/png" href="img/favicon.png">
+    <link rel="apple-touch-icon" href="img/apple-touch-icon.png">
+
+    <title>BYD Atto 1 - Detail Spesifikasi & Harga | BYD Electric</title>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -14,7 +44,7 @@
     <script src="https://unpkg.com/lucide@latest"></script>
 
     <style>
-        /* --- 1. DESIGN TOKENS (STANDARD) --- */
+        /* --- 1. DESIGN TOKENS --- */
         :root {
             --bg-dark: #121212;
             --bg-surface: #1E1E1E;
@@ -33,12 +63,23 @@
             box-sizing: border-box;
         }
 
+        html {
+            scroll-behavior: smooth;
+        }
+
         body {
             background-color: var(--bg-dark);
             color: var(--text-main);
             font-family: var(--font-main);
             line-height: 1.6;
             overflow-x: hidden;
+        }
+
+        /* RESET GAMBAR AGAR TIDAK GEPENG */
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
         }
 
         /* Navbar Styles */
@@ -63,7 +104,6 @@
             backdrop-filter: none;
         }
 
-        /* CONTAINER DEFAULT (Desktop/Tablet) */
         .container {
             max-width: 1200px;
             margin: 0 auto;
@@ -124,7 +164,6 @@
         }
 
         /* --- DETAIL PAGE STYLES --- */
-
         .detail-hero {
             padding: 40px 0 20px;
             text-align: center;
@@ -243,7 +282,7 @@
             font-weight: bold;
         }
 
-        /* Footer */
+        /* Footer & Utils */
         .site-footer {
             background-color: var(--bg-surface);
             padding: 80px 0 40px;
@@ -389,7 +428,7 @@
             display: inline-flex;
         }
 
-        /* --- MOBILE RESPONSIVE TWEAKS (OPTIMIZED) --- */
+        /* --- MOBILE RESPONSIVE TWEAKS --- */
         @media (max-width: 1024px) {
 
             .nav-links,
@@ -514,7 +553,7 @@
     <section class="detail-hero container">
         <h1>BYD Atto 1</h1>
         <p>City Electric Car. Compact, Smart & Agile.</p>
-        <img src="img/atto1.webp" alt="BYD Atto 1" class="hero-img">
+        <img src="img/atto1.webp" alt="BYD Atto 1 White" width="800" height="450" class="hero-img" loading="eager">
     </section>
 
     <section class="info-section container">
@@ -532,7 +571,8 @@
                 </p>
             </div>
             <div class="info-img-wrapper">
-                <img src="img/bydatto1.webp" alt="BYD Atto 1" class="info-img">
+                <img src="img/bydatto1.webp" alt="Eksterior BYD Atto 1" width="600" height="400" class="info-img"
+                    loading="lazy">
             </div>
         </div>
     </section>
@@ -591,8 +631,8 @@
         <div class="container">
             <div class="footer-grid">
                 <div class="footer-col">
-                    <a href="#" class="brand" style="display:block; margin-bottom:15px;">BYD<span
-                            style="color:var(--accent-cyan)">.</span></a>
+                    <a href="#" class="brand" style="display:block; margin-bottom:15px;"
+                        aria-label="BYD Footer Logo">BYD<span style="color:var(--accent-cyan)">.</span></a>
                     <p class="footer-desc">
                         Build Your Dreams. Pelopor global dalam inovasi teknologi energi bersih dan transportasi masa
                         depan.
@@ -657,12 +697,16 @@
 
     <script>
         lucide.createIcons();
+
+        // Mobile Menu Toggle
         function toggleMenu() {
             const menu = document.getElementById('mobileMenu');
             const nav = document.querySelector('.navbar');
             menu.classList.toggle('open');
             nav.classList.toggle('menu-active');
         }
+
+        // Scroll to Top
         const scrollBtn = document.getElementById('scrollTopBtn');
         window.onscroll = function () {
             if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
@@ -671,6 +715,7 @@
                 scrollBtn.classList.remove('show');
             }
         };
+
         function scrollToTop() {
             window.scrollTo({ top: 0, behavior: 'smooth' });
         }

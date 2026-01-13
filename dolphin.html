@@ -4,7 +4,37 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BYD Dolphin - Detail</title>
+
+    <meta name="description"
+        content="Informasi lengkap BYD Dolphin Indonesia. Hatchback listrik futuristik dengan efisiensi tinggi, fitur V2L, dan kenyamanan kabin luar biasa.">
+    <meta name="keywords"
+        content="BYD Dolphin, Hatchback Listrik, Spesifikasi Dolphin, Harga BYD Dolphin, Mobil Listrik Perkotaan, Blade Battery Hatchback">
+    <meta name="author" content="BYD Sales Indonesia">
+    <meta name="robots" content="index, follow">
+
+    <link rel="canonical" href="https://beyede.vercel.app/dolphin.html">
+
+    <meta property="og:type" content="product">
+    <meta property="og:url" content="https://beyede.vercel.app/dolphin.html">
+    <meta property="og:title" content="BYD Dolphin - Pure Electric Hatchback | Lincah & Futuristik">
+    <meta property="og:description"
+        content="Hatchback listrik dengan desain Ocean Aesthetics. Solusi cerdas untuk mobilitas modern yang ramah lingkungan.">
+    <meta property="og:image" content="https://beyede.vercel.app/img/dolphin.webp">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:type" content="image/webp">
+
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://beyede.vercel.app/dolphin.html">
+    <meta property="twitter:title" content="BYD Dolphin - Pure Electric Hatchback">
+    <meta property="twitter:description"
+        content="Hatchback listrik dengan desain Ocean Aesthetics. Solusi cerdas untuk mobilitas modern yang ramah lingkungan.">
+    <meta property="twitter:image" content="https://beyede.vercel.app/img/dolphin.webp">
+
+    <link rel="icon" type="image/png" href="img/favicon.png">
+    <link rel="apple-touch-icon" href="img/apple-touch-icon.png">
+
+    <title>BYD Dolphin - Detail Spesifikasi & Harga | BYD Electric</title>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -33,12 +63,23 @@
             box-sizing: border-box;
         }
 
+        html {
+            scroll-behavior: smooth;
+        }
+
         body {
             background-color: var(--bg-dark);
             color: var(--text-main);
             font-family: var(--font-main);
             line-height: 1.6;
             overflow-x: hidden;
+        }
+
+        /* RESET GAMBAR AGAR TIDAK GEPENG */
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
         }
 
         /* Navbar Styles */
@@ -63,7 +104,6 @@
             backdrop-filter: none;
         }
 
-        /* CONTAINER DEFAULT (Desktop/Tablet) */
         .container {
             max-width: 1200px;
             margin: 0 auto;
@@ -124,8 +164,6 @@
         }
 
         /* --- DETAIL PAGE STYLES --- */
-
-        /* 1. Hero Compact */
         .detail-hero {
             padding: 40px 0 20px;
             text-align: center;
@@ -152,7 +190,6 @@
             filter: drop-shadow(0 20px 40px rgba(0, 0, 0, 0.5));
         }
 
-        /* 2. Content & Interior */
         .info-section {
             padding: 60px 0;
         }
@@ -169,7 +206,6 @@
             margin-bottom: 15px;
         }
 
-        /* Default Desktop: Justify */
         .info-text p {
             color: var(--text-muted);
             text-align: justify;
@@ -182,7 +218,6 @@
             border: 1px solid var(--border-subtle);
         }
 
-        /* 3. Specs Table Premium */
         .specs-section {
             padding-bottom: 80px;
         }
@@ -393,7 +428,7 @@
             display: inline-flex;
         }
 
-        /* --- MOBILE RESPONSIVE TWEAKS (OPTIMIZED) --- */
+        /* --- MOBILE RESPONSIVE TWEAKS --- */
         @media (max-width: 1024px) {
 
             .nav-links,
@@ -405,7 +440,6 @@
                 display: block;
             }
 
-            /* Typography & Spacing */
             .detail-hero h1 {
                 font-size: 2.2rem;
             }
@@ -415,13 +449,11 @@
                 margin-bottom: 20px;
             }
 
-            /* Hero Image */
             .hero-img {
                 margin-top: 10px;
                 width: 100%;
             }
 
-            /* Info Section */
             .info-section {
                 padding: 40px 0;
             }
@@ -440,22 +472,18 @@
                 font-size: 1.8rem;
             }
 
-            /* Text Align Left di Mobile */
             .info-text p {
                 text-align: left;
             }
 
-            /* Tabel Spesifikasi Mobile */
             .specs-section {
                 padding-bottom: 60px;
             }
 
-            /* Kurangi padding wrapper luar di mobile */
             .specs-table-wrapper {
                 padding: 5px;
             }
 
-            /* Kurangi padding sel di mobile */
             .specs-table td {
                 padding: 12px 10px;
             }
@@ -474,14 +502,12 @@
                 width: 100%;
             }
 
-            /* Footer Grid Mobile */
             .footer-grid {
                 grid-template-columns: repeat(2, 1fr);
                 gap: 30px;
             }
         }
 
-        /* BREAKPOINT TAMBAHAN UNTUK HP KECIL */
         @media (max-width: 480px) {
             .footer-grid {
                 grid-template-columns: 1fr;
@@ -527,7 +553,7 @@
     <section class="detail-hero container">
         <h1>BYD Dolphin</h1>
         <p>Pure Electric Hatchback. Lincah, Efisien, dan Futuristik.</p>
-        <img src="img/dolphin.webp" alt="BYD Dolphin" class="hero-img">
+        <img src="img/dolphin.webp" alt="BYD Dolphin White" width="800" height="450" class="hero-img" loading="eager">
     </section>
 
     <section class="info-section container">
@@ -535,18 +561,18 @@
             <div class="info-text">
                 <h2>Ocean Aesthetics</h2>
                 <p>
-                    BYD Dolphin mengusung konsep desain "Ocean Aesthetics" yang terinspirasi dari lumba-lumba,
-                    menampilkan garis bodi yang halus namun tegas. Sebagai model pertama yang dibangun di atas
-                    **e-Platform 3.0**, mobil ini menawarkan efisiensi energi kelas dunia dan ruang kabin yang
-                    mengejutkan luas untuk ukurannya.
+                    BYD Dolphin mengusung konsep desain "Ocean Aesthetics" yang terinspirasi dari lumba-lumba.
+                    Menampilkan
+                    garis bodi yang halus namun tegas, sempurna untuk perkotaan.
                 </p>
                 <p>
-                    Kabin modern dengan desain two-tone, layar sentuh berputar 12.8 inci, dan jok kulit sintetis
-                    yang nyaman menjadikan setiap perjalanan dalam kota maupun luar kota menyenangkan.
+                    Kabin modern dengan layar sentuh berputar 12.8 inci dan teknologi Blade Battery menjadikan setiap
+                    perjalanan aman dan menyenangkan.
                 </p>
             </div>
             <div class="info-img-wrapper">
-                <img src="img/byddolphin.webp" alt="BYD Dolphin" class="info-img">
+                <img src="img/byddolphin.webp" alt="Interior Dolphin" width="600" height="400" class="info-img"
+                    loading="lazy">
             </div>
         </div>
     </section>
@@ -554,7 +580,7 @@
     <section class="specs-section container">
         <div style="text-align: center; margin-bottom: 30px;">
             <h2>Spesifikasi Teknis</h2>
-            <p style="color:var(--text-muted)">Varian: BYD Dolphin Premium (Extended Range)</p>
+            <p style="color:var(--text-muted)">Varian: Premium (Extended Range)</p>
         </div>
 
         <div class="specs-table-wrapper">
@@ -577,14 +603,6 @@
                         <td class="spec-value">7.0 Detik</td>
                     </tr>
                     <tr>
-                        <td class="spec-label">Tenaga Maksimum</td>
-                        <td class="spec-value">150 kW (204 PS)</td>
-                    </tr>
-                    <tr>
-                        <td class="spec-label">Torsi Maksimum</td>
-                        <td class="spec-value">310 Nm</td>
-                    </tr>
-                    <tr>
                         <td class="spec-label">Dimensi (P x L x T)</td>
                         <td class="spec-value">4290 x 1770 x 1570 mm</td>
                     </tr>
@@ -605,8 +623,8 @@
         <div class="container">
             <div class="footer-grid">
                 <div class="footer-col">
-                    <a href="#" class="brand" style="display:block; margin-bottom:15px;">BYD<span
-                            style="color:var(--accent-cyan)">.</span></a>
+                    <a href="#" class="brand" style="display:block; margin-bottom:15px;"
+                        aria-label="BYD Footer Logo">BYD<span style="color:var(--accent-cyan)">.</span></a>
                     <p class="footer-desc">
                         Build Your Dreams. Pelopor global dalam inovasi teknologi energi bersih dan transportasi masa
                         depan.
@@ -671,12 +689,16 @@
 
     <script>
         lucide.createIcons();
+
+        // Navbar Logic
         function toggleMenu() {
             const menu = document.getElementById('mobileMenu');
             const nav = document.querySelector('.navbar');
             menu.classList.toggle('open');
             nav.classList.toggle('menu-active');
         }
+
+        // Scroll Top Logic
         const scrollBtn = document.getElementById('scrollTopBtn');
         window.onscroll = function () {
             if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
