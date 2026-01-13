@@ -6,9 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <meta name="description"
-        content="BYD Electric Indonesia. Jelajahi masa depan teknologi kendaraan listrik dengan BYD Seal, Atto 3, Dolphin, dan M6. Inovasi Blade Battery untuk performa dan keamanan terbaik.">
+        content="Dealer Resmi BYD Indonesia. Temukan mobil listrik masa depan: BYD Seal, Atto 3, Dolphin, dan M6. Teknologi Blade Battery yang aman dan efisien.">
     <meta name="keywords"
-        content="BYD, Mobil Listrik, Electric Vehicle, BYD Seal, BYD Atto 3, BYD Dolphin, BYD M6, Blade Battery, EV Indonesia">
+        content="BYD Indonesia, Mobil Listrik BYD, Harga BYD Seal, BYD Atto 3, BYD Dolphin, BYD M6, Dealer BYD, Test Drive Mobil Listrik">
     <meta name="author" content="BYD Sales Indonesia">
     <meta name="robots" content="index, follow">
 
@@ -16,25 +16,25 @@
 
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://beyede.vercel.app/">
-    <meta property="og:title" content="BYD Electric - Future Technology">
+    <meta property="og:title" content="BYD Electric Indonesia - Masa Depan Berkendara">
     <meta property="og:description"
-        content="Jelajahi masa depan teknologi kendaraan listrik dengan BYD. Performa senyap, Blade Battery revolusioner, dan kemewahan berkendara modern.">
-    <meta property="og:image" content="https://beyede.vercel.app/img/about.webp">
+        content="Jelajahi lini kendaraan listrik premium BYD. Performa tinggi, jarak tempuh jauh, dan keamanan terjamin dengan Blade Battery.">
+    <meta property="og:image" content="https://beyede.vercel.app/img/mobil.webp">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
     <meta property="og:image:type" content="image/webp">
 
     <meta property="twitter:card" content="summary_large_image">
     <meta property="twitter:url" content="https://beyede.vercel.app/">
-    <meta property="twitter:title" content="BYD Electric - Future Technology">
+    <meta property="twitter:title" content="BYD Electric Indonesia">
     <meta property="twitter:description"
-        content="Jelajahi masa depan teknologi kendaraan listrik dengan BYD. Performa senyap, Blade Battery revolusioner, dan kemewahan berkendara modern.">
-    <meta property="twitter:image" content="https://beyede.vercel.app/img/about.webp">
+        content="Jelajahi lini kendaraan listrik premium BYD. Performa tinggi dan keamanan terjamin.">
+    <meta property="twitter:image" content="https://beyede.vercel.app/img/mobil.webp">
 
     <link rel="icon" type="image/png" href="img/favicon.png">
     <link rel="apple-touch-icon" href="img/apple-touch-icon.png">
 
-    <title>BYD Electric - Future Technology | Mobil Listrik Masa Depan</title>
+    <title>BYD Electric Indonesia - Masa Depan Berkendara</title>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -76,15 +76,13 @@
             overflow-x: hidden;
         }
 
-        /* RESET GAMBAR AGAR TIDAK GEPENG */
         img {
             max-width: 100%;
             height: auto;
-            /* Kunci agar rasio gambar tetap terjaga */
             display: block;
         }
 
-        /* Texture (Z-Index diatur agar di bawah Navbar) */
+        /* Background Texture */
         body::before {
             content: "";
             position: fixed;
@@ -152,7 +150,7 @@
             background: rgba(255, 255, 255, 0.05);
         }
 
-        /* --- NAVBAR FIX (Z-INDEX TINGGI) --- */
+        /* --- NAVBAR --- */
         .navbar-wrapper {
             position: sticky;
             top: 0;
@@ -173,7 +171,6 @@
         .navbar.menu-active {
             background: #121212 !important;
             backdrop-filter: none;
-            border-bottom: 1px solid #222;
         }
 
         .nav-content {
@@ -189,7 +186,6 @@
             letter-spacing: -0.05em;
         }
 
-        /* Desktop Menu */
         .nav-links {
             display: flex;
             gap: 30px;
@@ -218,11 +214,14 @@
             background: var(--accent-cyan);
         }
 
-        /* Mobile Menu */
+        /* FIX: Changed div to button for accessibility */
         .mobile-toggle {
             display: none;
             cursor: pointer;
             color: var(--text-main);
+            background: none;
+            border: none;
+            padding: 5px;
         }
 
         .mobile-menu {
@@ -237,8 +236,6 @@
             flex-direction: column;
             gap: 20px;
             box-shadow: 0 20px 40px rgba(0, 0, 0, 0.8);
-            transform-origin: top;
-            animation: slideDown 0.3s ease-out;
             z-index: 10000;
         }
 
@@ -251,24 +248,6 @@
             color: var(--text-muted);
             padding: 10px 0;
             border-bottom: 1px solid rgba(255, 255, 255, 0.05);
-        }
-
-        .mobile-menu a:hover,
-        .mobile-menu a.active {
-            color: var(--accent-cyan);
-            padding-left: 10px;
-        }
-
-        @keyframes slideDown {
-            from {
-                opacity: 0;
-                transform: translateY(-10px);
-            }
-
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
         }
 
         /* --- HERO SECTION --- */
@@ -331,7 +310,6 @@
             display: flex;
             gap: 15px;
             flex-wrap: wrap;
-            justify-content: flex-start;
         }
 
         .hero-image-wrapper {
@@ -389,7 +367,7 @@
             right: 20px;
         }
 
-        /* --- PRODUCTS --- */
+        /* --- SECTIONS --- */
         .section-title {
             text-align: center;
             margin-bottom: 60px;
@@ -398,10 +376,6 @@
         .section-title h2 {
             font-size: 2.5rem;
             margin-bottom: 10px;
-        }
-
-        .section-title p {
-            color: var(--text-muted);
         }
 
         .product-grid {
@@ -424,15 +398,6 @@
             background: var(--bg-elevated);
         }
 
-        .product-img {
-            width: 100%;
-            height: 200px;
-            object-fit: contain;
-            margin-bottom: 20px;
-            filter: drop-shadow(0 10px 20px rgba(0, 0, 0, 0.2));
-        }
-
-        /* H3 untuk nama produk agar hierarki rapi */
         .p-name {
             font-size: 1.5rem;
             margin-bottom: 5px;
@@ -462,28 +427,21 @@
             color: var(--text-muted);
         }
 
-        /* --- PROMO BANNER --- */
+        /* Promo */
         .promo-section {
             padding: 40px 0 80px;
         }
 
         .promo-box {
-            position: relative;
             width: 100%;
-            height: auto;
             border-radius: 30px;
             overflow: hidden;
             border: 1px solid var(--border-subtle);
-            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
             background: #000;
-            display: flex;
         }
 
         .promo-bg {
             width: 100%;
-            height: auto;
-            display: block;
-            opacity: 0.9;
             transition: transform 10s ease;
         }
 
@@ -491,7 +449,7 @@
             transform: scale(1.05);
         }
 
-        /* --- FORM --- */
+        /* CTA */
         .cta-section {
             padding: 80px 0 100px;
         }
@@ -542,7 +500,7 @@
             background: rgba(0, 0, 0, 0.4);
         }
 
-        /* --- FLOATING BUTTONS --- */
+        /* --- FLOATING BUTTONS (FIX) --- */
         .floating-container {
             position: fixed;
             bottom: 30px;
@@ -554,6 +512,7 @@
             align-items: flex-end;
         }
 
+        /* FIX: Changed div to button/a for a11y */
         .float-btn {
             width: 60px;
             height: 60px;
@@ -566,21 +525,12 @@
             transition: 0.3s;
             color: white;
             padding: 0;
-        }
-
-        .float-btn svg {
-            width: 32px;
-            height: 32px;
-            display: block;
+            border: none;
+            outline: none;
         }
 
         .btn-wa {
             background-color: var(--wa-green);
-        }
-
-        .btn-wa:hover {
-            transform: scale(1.1);
-            background-color: #20b857;
         }
 
         .btn-scroll {
@@ -588,17 +538,11 @@
             border: 1px solid var(--border-subtle);
             opacity: 0;
             pointer-events: none;
-            transition: 0.3s;
         }
 
         .btn-scroll.show {
             opacity: 1;
             pointer-events: auto;
-        }
-
-        .btn-scroll:hover {
-            background-color: var(--accent-cyan);
-            border-color: var(--accent-cyan);
         }
 
         /* Footer */
@@ -616,7 +560,8 @@
             margin-bottom: 60px;
         }
 
-        .footer-col h4 {
+        /* FIX: H3 for hierarchy */
+        .footer-col h3 {
             color: var(--text-main);
             font-size: 1.1rem;
             margin-bottom: 24px;
@@ -642,12 +587,6 @@
             transform: translateX(5px);
         }
 
-        .footer-desc {
-            color: var(--text-muted);
-            margin-bottom: 20px;
-            line-height: 1.6;
-        }
-
         .contact-item {
             display: flex;
             gap: 12px;
@@ -662,15 +601,17 @@
             margin-top: 3px;
         }
 
+        /* FIX: Contrast Color */
         .footer-bottom {
             text-align: center;
             padding-top: 40px;
             border-top: 1px solid rgba(255, 255, 255, 0.05);
-            color: #555;
+            color: #A0A0A0;
+            /* Improved Contrast */
             font-size: 0.85rem;
         }
 
-        /* --- MOBILE RESPONSIVE TWEAKS --- */
+        /* Mobile */
         @media (max-width: 1024px) {
             .footer-grid {
                 grid-template-columns: repeat(2, 1fr);
@@ -684,12 +625,7 @@
 
             .hero-image-wrapper {
                 order: -1;
-                margin-top: 0;
                 margin-bottom: 40px;
-            }
-
-            .hero-text h1 {
-                font-size: 2.5rem;
             }
 
             .spec-float {
@@ -708,10 +644,6 @@
             .mobile-toggle {
                 display: block;
             }
-
-            .promo-box {
-                height: auto;
-            }
         }
 
         @media (max-width: 640px) {
@@ -728,26 +660,8 @@
                 width: 100%;
             }
 
-            .hero {
-                padding: 40px 0 60px;
-            }
-
             .hero-text h1 {
                 font-size: 2.2rem;
-            }
-
-            .section-title h2 {
-                font-size: 2rem;
-            }
-
-            .product-grid {
-                grid-template-columns: 1fr;
-                max-width: 400px;
-                margin: 0 auto;
-            }
-
-            .cta-box {
-                padding: 40px 20px;
             }
         }
     </style>
@@ -773,9 +687,9 @@
                     Hubungi Sales
                 </a>
 
-                <div class="mobile-toggle" onclick="toggleMenu()" aria-label="Menu Toggle">
+                <button class="mobile-toggle" onclick="toggleMenu()" aria-label="Buka Menu" type="button">
                     <i data-lucide="menu" style="width: 28px; height: 28px;"></i>
-                </div>
+                </button>
             </div>
         </div>
 
@@ -789,181 +703,143 @@
         </div>
     </nav>
 
-    <header class="hero">
-        <div class="glow glow-1"></div>
-        <div class="glow glow-2"></div>
+    <main>
+        <header class="hero">
+            <div class="glow glow-1"></div>
+            <div class="glow glow-2"></div>
 
-        <div class="container">
-            <div class="hero-grid">
-                <div class="hero-text">
-                    <h1>Masa Depan <br><span class="highlight">Elektrifikasi.</span></h1>
-                    <p>
-                        Nikmati performa senyap dan teknologi Blade Battery yang revolusioner.
-                        Kemewahan berkendara modern bersama BYD.
-                    </p>
+            <div class="container">
+                <div class="hero-grid">
+                    <div class="hero-text">
+                        <h1>Masa Depan <br><span class="highlight">Elektrifikasi.</span></h1>
+                        <p>
+                            Nikmati performa senyap dan teknologi Blade Battery yang revolusioner.
+                            Kemewahan berkendara modern bersama BYD.
+                        </p>
 
-                    <div class="hero-buttons">
-                        <a href="model.html" class="btn btn-primary" aria-label="Lihat Model Mobil">
-                            Lihat Model <i data-lucide="arrow-right" style="width:18px"></i>
-                        </a>
-                        <a href="pricelist.html" class="btn btn-outline" aria-label="Lihat Daftar Harga">
-                            Daftar Harga
-                        </a>
-                    </div>
-                </div>
-
-                <div class="hero-image-wrapper">
-                    <img src="img/mobil.webp" alt="BYD Seal White Performance Electric Sedan" width="600" height="400"
-                        loading="eager">
-
-                    <div class="spec-float sf-1">
-                        <i data-lucide="battery-charging"></i>
-                        <div>
-                            <span class="spec-val">650 km</span>
-                            <span class="spec-lbl">Jarak Tempuh</span>
+                        <div class="hero-buttons">
+                            <a href="model.html" class="btn btn-primary" aria-label="Lihat Model Mobil">
+                                Lihat Model <i data-lucide="arrow-right" style="width:18px"></i>
+                            </a>
+                            <a href="pricelist.html" class="btn btn-outline" aria-label="Lihat Daftar Harga">
+                                Daftar Harga
+                            </a>
                         </div>
                     </div>
-                    <div class="spec-float sf-2">
-                        <i data-lucide="zap"></i>
-                        <div>
-                            <span class="spec-val">3.8s</span>
-                            <span class="spec-lbl">0-100 km/h</span>
+
+                    <div class="hero-image-wrapper">
+                        <img src="img/mobil.webp" alt="BYD Seal White Performance Electric Sedan" width="600"
+                            height="400" loading="eager">
+
+                        <div class="spec-float sf-1">
+                            <i data-lucide="battery-charging"></i>
+                            <div>
+                                <span class="spec-val">650 km</span>
+                                <span class="spec-lbl">Jarak Tempuh</span>
+                            </div>
+                        </div>
+                        <div class="spec-float sf-2">
+                            <i data-lucide="zap"></i>
+                            <div>
+                                <span class="spec-val">3.8s</span>
+                                <span class="spec-lbl">0-100 km/h</span>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </header>
+        </header>
 
-    <section class="container" id="models" style="padding-top: 60px;">
-        <div class="section-title">
-            <h2>Koleksi Premium</h2>
-            <p>Teknologi EV terdepan untuk setiap gaya hidup.</p>
-        </div>
+        <section class="container" id="models" style="padding-top: 60px;">
+            <div class="section-title">
+                <h2>Koleksi Premium</h2>
+                <p>Teknologi EV terdepan untuk setiap gaya hidup.</p>
+            </div>
 
-        <div class="product-grid">
+            <div class="product-grid">
+                <article class="product-card">
+                    <img src="img/seal.webp" alt="BYD Seal" class="product-img" width="300" height="200" loading="lazy">
+                    <h3 class="p-name">BYD Seal</h3>
+                    <p class="p-desc">Performance Sedan dengan estetika Ocean X.</p>
+                    <div class="p-specs">
+                        <div class="p-spec-item"><strong>570 km</strong><span>Range</span></div>
+                        <div class="p-spec-item"><strong>3.8s</strong><span>0-100</span></div>
+                    </div>
+                    <a href="seal.html" class="btn btn-outline" style="width:100%; border-radius: 12px;">Lihat
+                        Detail</a>
+                </article>
 
-            <article class="product-card">
-                <img src="img/seal.webp" alt="BYD Seal Performance Sedan" class="product-img" width="300" height="200"
+                <article class="product-card">
+                    <img src="img/atto3.webp" alt="BYD Atto 3" class="product-img" width="300" height="200"
+                        loading="lazy">
+                    <h3 class="p-name">BYD Atto 3</h3>
+                    <p class="p-desc">SUV Dinamis yang luas dan bertenaga.</p>
+                    <div class="p-specs">
+                        <div class="p-spec-item"><strong>420 km</strong><span>Range</span></div>
+                        <div class="p-spec-item"><strong>7.3s</strong><span>0-100</span></div>
+                    </div>
+                    <a href="atto3.html" class="btn btn-outline" style="width:100%; border-radius: 12px;">Lihat
+                        Detail</a>
+                </article>
+
+                <article class="product-card">
+                    <img src="img/dolphin.webp" alt="BYD Dolphin" class="product-img" width="300" height="200"
+                        loading="lazy">
+                    <h3 class="p-name">BYD Dolphin</h3>
+                    <p class="p-desc">Compact Hatchback lincah nan efisien.</p>
+                    <div class="p-specs">
+                        <div class="p-spec-item"><strong>427 km</strong><span>Range</span></div>
+                        <div class="p-spec-item"><strong>60kWh</strong><span>Battery</span></div>
+                    </div>
+                    <a href="dolphin.html" class="btn btn-outline" style="width:100%; border-radius: 12px;">Lihat
+                        Detail</a>
+                </article>
+            </div>
+
+            <div style="text-align: center; margin-top: 50px;">
+                <a href="model.html" class="btn btn-outline" style="padding: 16px 40px;">
+                    Lihat Semua Model <i data-lucide="arrow-right"></i>
+                </a>
+            </div>
+        </section>
+
+        <section class="container promo-section">
+            <a href="https://wa.me/62895639068080" target="_blank" class="promo-box" aria-label="Promo WhatsApp">
+                <img src="img/promo.gif" alt="BYD Interior Promo" class="promo-bg" width="1200" height="600"
                     loading="lazy">
-                <h3 class="p-name">BYD Seal</h3>
-                <p class="p-desc">Performance Sedan dengan estetika Ocean X.</p>
-
-                <div class="p-specs">
-                    <div class="p-spec-item">
-                        <strong>570 km</strong>
-                        <span>Range</span>
-                    </div>
-                    <div class="p-spec-item">
-                        <strong>3.8s</strong>
-                        <span>0-100</span>
-                    </div>
-                </div>
-                <a href="seal.html" class="btn btn-outline" style="width:100%; border-radius: 12px;">Lihat Detail</a>
-            </article>
-
-            <article class="product-card">
-                <img src="img/atto3.webp" alt="BYD Atto 3 Electric SUV" class="product-img" width="300" height="200"
-                    loading="lazy">
-                <h3 class="p-name">BYD Atto 3</h3>
-                <p class="p-desc">SUV Dinamis yang luas dan bertenaga.</p>
-
-                <div class="p-specs">
-                    <div class="p-spec-item">
-                        <strong>420 km</strong>
-                        <span>Range</span>
-                    </div>
-                    <div class="p-spec-item">
-                        <strong>7.3s</strong>
-                        <span>0-100</span>
-                    </div>
-                </div>
-                <a href="atto3.html" class="btn btn-outline" style="width:100%; border-radius: 12px;">Lihat Detail</a>
-            </article>
-
-            <article class="product-card">
-                <img src="img/dolphin.webp" alt="BYD Dolphin Electric Hatchback" class="product-img" width="300"
-                    height="200" loading="lazy">
-                <h3 class="p-name">BYD Dolphin</h3>
-                <p class="p-desc">Compact Hatchback lincah nan efisien.</p>
-
-                <div class="p-specs">
-                    <div class="p-spec-item">
-                        <strong>427 km</strong>
-                        <span>Range</span>
-                    </div>
-                    <div class="p-spec-item">
-                        <strong>60kWh</strong>
-                        <span>Battery</span>
-                    </div>
-                </div>
-                <a href="dolphin.html" class="btn btn-outline" style="width:100%; border-radius: 12px;">Lihat Detail</a>
-            </article>
-
-        </div>
-
-        <div style="text-align: center; margin-top: 50px;">
-            <a href="model.html" class="btn btn-outline" style="padding: 16px 40px;">
-                Lihat Semua Model <i data-lucide="arrow-right"></i>
             </a>
-        </div>
+        </section>
 
-    </section>
+        <section class="cta-section container" id="contact">
+            <div class="cta-box">
+                <div class="cta-glow"></div>
+                <h2>Mulai Pengalaman Anda</h2>
+                <p style="color:var(--text-muted); margin-bottom: 20px;">Konsultasikan kebutuhan mobil listrik Anda
+                    dengan Sales Executive kami.</p>
 
-    <section class="container promo-section">
-        <a href="https://wa.me/62895639068080" target="_blank" class="promo-box"
-            style="display: block; cursor: pointer;" aria-label="Promo WhatsApp">
-            <img src="img/promo.gif" alt="BYD Interior Experience Promo" class="promo-bg" width="1200" height="600"
-                loading="lazy">
-        </a>
-    </section>
-
-    <section class="cta-section container" id="contact">
-        <div class="cta-box">
-            <div class="cta-glow"></div>
-            <h2>Mulai Pengalaman Anda</h2>
-            <p style="color:var(--text-muted); margin-bottom: 20px;">Konsultasikan kebutuhan mobil listrik Anda dengan
-                Sales Executive kami.</p>
-
-            <form class="form-row" id="waForm" onsubmit="sendToWhatsapp(event)">
-                <input type="text" id="waName" placeholder="Nama Anda" class="input-dark" required
-                    aria-label="Nama Anda">
-                <input type="text" id="waNumber" placeholder="Nomor WhatsApp Anda" class="input-dark" required
-                    aria-label="Nomor WhatsApp">
-                <button type="submit" class="btn btn-primary">Kirim Pesan</button>
-            </form>
-        </div>
-    </section>
-
-    <script>
-        function sendToWhatsapp(e) {
-            e.preventDefault();
-
-            const name = document.getElementById('waName').value;
-            const userNumber = document.getElementById('waNumber').value;
-            const targetNumber = '62895639068080';
-            const message = `Halo Sales BYD, perkenalkan saya *${name}* (${userNumber}). Saya ingin konsultasi mengenai mobil listrik BYD. Mohon informasinya. Terima kasih.`;
-            const waUrl = `https://wa.me/${targetNumber}?text=${encodeURIComponent(message)}`;
-
-            window.open(waUrl, '_blank');
-        }
-    </script>
+                <form class="form-row" onsubmit="sendToWhatsapp(event)">
+                    <input type="text" id="waName" placeholder="Nama Anda" class="input-dark" required
+                        aria-label="Nama Anda">
+                    <input type="text" id="waNumber" placeholder="Nomor WhatsApp Anda" class="input-dark" required
+                        aria-label="Nomor WhatsApp">
+                    <button type="submit" class="btn btn-primary">Kirim Pesan</button>
+                </form>
+            </div>
+        </section>
+    </main>
 
     <footer class="site-footer">
         <div class="container">
             <div class="footer-grid">
-
                 <div class="footer-col">
                     <a href="#" class="brand" style="display:block; margin-bottom:15px;"
                         aria-label="BYD Footer Logo">BYD<span style="color:var(--accent-cyan)">.</span></a>
-                    <p class="footer-desc">
-                        Build Your Dreams. Pelopor global dalam inovasi teknologi energi bersih dan transportasi masa
-                        depan.
-                    </p>
+                    <p class="footer-desc">Build Your Dreams. Pelopor global dalam inovasi teknologi energi bersih dan
+                        transportasi masa depan.</p>
                 </div>
 
                 <div class="footer-col">
-                    <h4>Pintasan</h4>
+                    <h3>Pintasan</h3>
                     <ul>
                         <li><a href="#">Beranda</a></li>
                         <li><a href="about.html">Tentang Kami</a></li>
@@ -974,43 +850,32 @@
                 </div>
 
                 <div class="footer-col">
-                    <h4>Model</h4>
+                    <h3>Model</h3>
                     <ul>
                         <li><a href="model.html">BYD Seal</a></li>
                         <li><a href="model.html">BYD Atto 3</a></li>
                         <li><a href="model.html">BYD Dolphin</a></li>
                         <li><a href="model.html">BYD M6</a></li>
-                        <li><a href="model.html">Lihat Semua</a></li>
                     </ul>
                 </div>
 
                 <div class="footer-col">
-                    <h4>Network</h4>
+                    <h3>Network</h3>
                     <ul>
                         <li><a href="#">Dealer Malang</a></li>
                         <li><a href="#">Dealer Surabaya</a></li>
                         <li><a href="#">Service Center</a></li>
-                        <li><a href="#">Sparepart</a></li>
                         <li><a href="#">Charging Station</a></li>
                     </ul>
                 </div>
 
                 <div class="footer-col">
-                    <h4>Kontak Kami</h4>
-                    <div class="contact-item">
-                        <i data-lucide="user"></i>
-                        <span>Sales Executive BYD</span>
-                    </div>
-                    <div class="contact-item">
-                        <i data-lucide="message-circle"></i>
-                        <span>+62 812-3456-7890</span>
-                    </div>
-                    <div class="contact-item">
-                        <i data-lucide="map-pin"></i>
-                        <span>Jl. Jenderal Sudirman No. 88, Malang, Jawa Timur</span>
-                    </div>
+                    <h3>Kontak Kami</h3>
+                    <div class="contact-item"><i data-lucide="user"></i><span>Sales Executive BYD</span></div>
+                    <div class="contact-item"><i data-lucide="message-circle"></i><span>+62 812-3456-7890</span></div>
+                    <div class="contact-item"><i data-lucide="map-pin"></i><span>Jl. Jenderal Sudirman No. 88, Malang,
+                            Jawa Timur</span></div>
                 </div>
-
             </div>
 
             <div class="footer-bottom">
@@ -1020,9 +885,10 @@
     </footer>
 
     <div class="floating-container">
-        <div class="float-btn btn-scroll" id="scrollTopBtn" onclick="scrollToTop()" aria-label="Scroll to Top">
+        <button class="float-btn btn-scroll" id="scrollTopBtn" onclick="scrollToTop()" aria-label="Scroll to Top"
+            type="button">
             <i data-lucide="arrow-up"></i>
-        </div>
+        </button>
 
         <a href="https://wa.me/62895639068080" target="_blank" class="float-btn btn-wa"
             title="Hubungi Kami via WhatsApp" aria-label="Chat WhatsApp">
@@ -1037,15 +903,13 @@
     <script>
         lucide.createIcons();
 
-        // Mobile Menu Toggle
         function toggleMenu() {
             const menu = document.getElementById('mobileMenu');
-            const nav = document.querySelector('.navbar'); // Select navbar
+            const nav = document.querySelector('.navbar');
             menu.classList.toggle('open');
-            nav.classList.toggle('menu-active'); // Toggle grey background
+            nav.classList.toggle('menu-active');
         }
 
-        // Scroll to Top
         const scrollBtn = document.getElementById('scrollTopBtn');
         window.onscroll = function () {
             if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
@@ -1057,6 +921,16 @@
 
         function scrollToTop() {
             window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        function sendToWhatsapp(e) {
+            e.preventDefault();
+            const name = document.getElementById('waName').value;
+            const userNumber = document.getElementById('waNumber').value;
+            const targetNumber = '62895639068080';
+            const message = `Halo Sales BYD, perkenalkan saya *${name}* (${userNumber}). Saya ingin konsultasi mengenai mobil listrik BYD. Mohon informasinya. Terima kasih.`;
+            const waUrl = `https://wa.me/${targetNumber}?text=${encodeURIComponent(message)}`;
+            window.open(waUrl, '_blank');
         }
     </script>
 </body>
