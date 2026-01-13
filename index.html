@@ -41,8 +41,6 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
         rel="stylesheet">
 
-    <script src="https://unpkg.com/lucide@latest"></script>
-
     <style>
         /* --- 1. DESIGN TOKENS --- */
         :root {
@@ -214,13 +212,15 @@
             background: var(--accent-cyan);
         }
 
+        /* FIX: Reset button styles for accessibility */
         .mobile-toggle {
             display: none;
             cursor: pointer;
             color: var(--text-main);
-            background: none;
+            background: transparent;
             border: none;
             padding: 5px;
+            outline: none;
         }
 
         .mobile-menu {
@@ -511,6 +511,7 @@
             align-items: flex-end;
         }
 
+        /* FIX: Reset button styles for float-btn */
         .float-btn {
             width: 60px;
             height: 60px;
@@ -558,6 +559,7 @@
             margin-bottom: 60px;
         }
 
+        /* FIX: Changed h4 to h3 for hierarchy */
         .footer-col h3 {
             color: var(--text-main);
             font-size: 1.1rem;
@@ -598,11 +600,13 @@
             margin-top: 3px;
         }
 
+        /* FIX: Improved Contrast Color */
         .footer-bottom {
             text-align: center;
             padding-top: 40px;
             border-top: 1px solid rgba(255, 255, 255, 0.05);
-            color: #A0A0A0;
+            color: #BFBFBF;
+            /* High Contrast Gray */
             font-size: 0.85rem;
         }
 
@@ -894,6 +898,8 @@
             </svg>
         </a>
     </div>
+
+    <script src="https://unpkg.com/lucide@latest"></script>
 
     <script>
         lucide.createIcons();
